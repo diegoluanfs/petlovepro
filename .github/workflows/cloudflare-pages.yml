@@ -1,0 +1,53 @@
+name: PetLovePro CI/CD - Cloudflare Pages
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: petlovepro-pages-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  validate-and-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+          package-manager-cache: false
+      - name: Run automated tests
+        run: npm test
+      - name: Validate all public files and 73 promotional images
+        run: npm run check:release
+      - name: Prepare isolated static deployment
+        id: stage
+        run: |
+          directory=$(node scripts/stage-cloudflare.cjs "$RUNNER_TEMP")
+          echo "directory=$directory" >> "$GITHUB_OUTPUT"
+      - name: Install Wrangler
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        working-directory: ${{ steps.stage.outputs.directory }}
+        run: npm install --no-save --no-package-lock --no-audit --no-fund wrangler@4.136.3
+      - name: Deploy static site to Cloudflare Pages
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        working-directory: ${{ steps.stage.outputs.directory }}
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          WRANGLER_SEND_METRICS: 'false'
+        run: |
+          test -n "$CLOUDFLARE_ACCOUNT_ID" && test -n "$CLOUDFLARE_API_TOKEN" || { echo 'Configure Cloudflare secrets in GitHub Actions.'; exit 1; }
+          ./node_modules/.bin/wrangler pages deploy public --project-name=petlovepro --branch=main --commit-hash="$GITHUB_SHA"

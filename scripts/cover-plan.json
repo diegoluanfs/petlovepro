@@ -1,242 +1,367 @@
 [
   {
     "name": "book-001.webp",
-    "source": "PetLovePro_Colecoes_01_e_02_v0.3.0/colecao_01/001_receitas_naturais_saudaveis_para_pets.pdf"
+    "source": "colecao-01/book-001/book-001.webp",
+    "kind": "cover"
   },
   {
     "name": "book-002.webp",
-    "source": "PetLovePro_Colecoes_01_e_02_v0.3.0/colecao_01/002_o_grande_livro_de_receitas_naturais_para_caes.pdf"
+    "source": "colecao-01/book-002/book-002.webp",
+    "kind": "cover"
   },
   {
     "name": "book-003.webp",
-    "source": "PetLovePro_Colecoes_01_e_02_v0.3.0/colecao_01/003_o_grande_livro_de_receitas_naturais_para_gatos.pdf"
+    "source": "colecao-01/book-003/book-003.webp",
+    "kind": "cover"
   },
   {
     "name": "book-004.webp",
-    "source": "PetLovePro_Colecoes_01_e_02_v0.3.0/colecao_01/004_petiscos_naturais_e_saudaveis_para_pets.pdf"
+    "source": "colecao-01/book-004/book-004.webp",
+    "kind": "cover"
   },
   {
     "name": "book-005.webp",
-    "source": "PetLovePro_Colecoes_01_e_02_v0.3.0/colecao_01/005_alimentacao_saudavel_para_pets_gastando_menos.pdf"
+    "source": "colecao-01/book-005/book-005.webp",
+    "kind": "cover"
   },
   {
     "name": "book-006.webp",
-    "source": "PetLovePro_Colecoes_07_a_10/colecao_09/006_guia_da_saude_dos_caes.pdf"
+    "source": "colecao-09/book-006/book-006.webp",
+    "kind": "cover"
   },
   {
     "name": "book-007.webp",
-    "source": "PetLovePro_Colecoes_07_a_10/colecao_09/007_guia_da_saude_dos_gatos.pdf"
+    "source": "colecao-09/book-007/book-007.webp",
+    "kind": "cover"
   },
   {
     "name": "book-008.webp",
-    "source": "PetLovePro_Colecoes_07_a_10/colecao_09/008_primeiros_socorros_para_pets.pdf"
+    "source": "colecao-09/book-008/book-008.webp",
+    "kind": "cover"
   },
   {
     "name": "book-009.webp",
-    "source": "PetLovePro_Colecoes_07_a_10/colecao_09/009_prevencao_de_doencas_e_cuidados_veterinarios.pdf"
+    "source": "colecao-09/book-009/book-009.webp",
+    "kind": "cover"
   },
   {
     "name": "book-010.webp",
-    "source": "PetLovePro_Colecoes_07_a_10/colecao_09/010_controle_de_peso_e_prevencao_da_obesidade_em_pets.pdf"
+    "source": "colecao-09/book-010/book-010.webp",
+    "kind": "cover"
   },
   {
     "name": "book-011.webp",
-    "source": "PetLovePro_Colecoes_03_e_04/colecao_03/011_entendendo_a_mente_dos_caes.pdf"
+    "source": "colecao-03/book-011/book-011.webp",
+    "kind": "cover"
   },
   {
     "name": "book-012.webp",
-    "source": "PetLovePro_Colecoes_03_e_04/colecao_03/012_entendendo_a_mente_dos_gatos.pdf"
+    "source": "colecao-03/book-012/book-012.webp",
+    "kind": "cover"
   },
   {
     "name": "book-013.webp",
-    "source": "PetLovePro_Colecoes_03_e_04/colecao_03/013_a_linguagem_corporal_dos_pets.pdf"
+    "source": "colecao-03/book-013/book-013.webp",
+    "kind": "cover"
   },
   {
     "name": "book-014.webp",
-    "source": "PetLovePro_Colecoes_03_e_04/colecao_03/014_ansiedade_medo_e_estresse_em_animais_domesticos.pdf"
+    "source": "colecao-03/book-014/book-014.webp",
+    "kind": "cover"
   },
   {
     "name": "book-015.webp",
-    "source": "PetLovePro_Colecoes_03_e_04/colecao_03/015_construindo_uma_conexao_emocional_com_seu_pet.pdf"
+    "source": "colecao-03/book-015/book-015.webp",
+    "kind": "cover"
   },
   {
     "name": "book-016.webp",
-    "source": "PetLovePro_Colecoes_03_e_04/colecao_04/016_adestramento_de_caes_para_iniciantes.pdf"
+    "source": "colecao-04/book-016/book-016.webp",
+    "kind": "cover"
   },
   {
     "name": "book-017.webp",
-    "source": "PetLovePro_Colecoes_03_e_04/colecao_04/017_adestramento_avancado_de_caes.pdf"
+    "source": "colecao-04/book-017/book-017.webp",
+    "kind": "cover"
   },
   {
     "name": "book-018.webp",
-    "source": "PetLovePro_Colecoes_03_e_04/colecao_04/018_como_educar_e_treinar_seu_gato.pdf"
+    "source": "colecao-04/book-018/book-018.webp",
+    "kind": "cover"
   },
   {
     "name": "book-019.webp",
-    "source": "PetLovePro_Colecoes_03_e_04/colecao_04/019_corrigindo_problemas_comportamentais_de_forma_positiva.pdf"
+    "source": "colecao-04/book-019/book-019.webp",
+    "kind": "cover"
   },
   {
     "name": "book-020.webp",
-    "source": "PetLovePro_Colecoes_03_e_04/colecao_04/020_atividades_e_truques_para_ensinar_ao_seu_pet.pdf"
+    "source": "colecao-04/book-020/book-020.webp",
+    "kind": "cover"
   },
   {
     "name": "book-021.webp",
-    "source": "PetLovePro_Colecoes_05_e_06/colecao_06/021_o_guia_completo_de_higiene_para_caes.pdf"
+    "source": "colecao-06/book-021/book-021.webp",
+    "kind": "cover"
   },
   {
     "name": "book-022.webp",
-    "source": "PetLovePro_Colecoes_05_e_06/colecao_06/022_o_guia_completo_de_higiene_para_gatos.pdf"
+    "source": "colecao-06/book-022/book-022.webp",
+    "kind": "cover"
   },
   {
     "name": "book-023.webp",
-    "source": "PetLovePro_Colecoes_05_e_06/colecao_06/023_banho_escovacao_e_cuidados_com_a_pelagem.pdf"
+    "source": "colecao-06/book-023/book-023.webp",
+    "kind": "cover"
   },
   {
     "name": "book-024.webp",
-    "source": "PetLovePro_Colecoes_05_e_06/colecao_06/024_saude_bucal_e_higiene_dental_dos_pets.pdf"
+    "source": "colecao-06/book-024/book-024.webp",
+    "kind": "cover"
   },
   {
     "name": "book-025.webp",
-    "source": "PetLovePro_Colecoes_05_e_06/colecao_06/025_cuidados_com_a_pele_patas_unhas_e_orelhas.pdf"
+    "source": "colecao-06/book-025/book-025.webp",
+    "kind": "cover"
   },
   {
     "name": "book-026.webp",
-    "source": "PetLovePro_Colecoes_07_a_10/colecao_07/026_meu_primeiro_filhote_de_cachorro.pdf"
+    "source": "colecao-07/book-026/book-026.webp",
+    "kind": "cover"
   },
   {
     "name": "book-027.webp",
-    "source": "PetLovePro_Colecoes_07_a_10/colecao_07/027_meu_primeiro_filhote_de_gato.pdf"
+    "source": "colecao-07/book-027/book-027.webp",
+    "kind": "cover"
   },
   {
     "name": "book-028.webp",
-    "source": "PetLovePro_Colecoes_07_a_10/colecao_07/028_cuidados_com_pets_adultos.pdf"
+    "source": "colecao-07/book-028/book-028.webp",
+    "kind": "cover"
   },
   {
     "name": "book-029.webp",
-    "source": "PetLovePro_Colecoes_07_a_10/colecao_07/029_envelhecendo_com_qualidade_cuidados_com_pets_idosos.pdf"
+    "source": "colecao-07/book-029/book-029.webp",
+    "kind": "cover"
   },
   {
     "name": "book-030.webp",
-    "source": "PetLovePro_Colecoes_07_a_10/colecao_07/030_adocao_responsavel_e_adaptacao_ao_novo_lar.pdf"
+    "source": "colecao-07/book-030/book-030.webp",
+    "kind": "cover"
   },
   {
     "name": "book-031.webp",
-    "source": "PetLovePro_Colecoes_05_e_06/colecao_05/031_exercicios_fisicos_e_atividades_para_caes.pdf"
+    "source": "colecao-05/book-031/book-031.webp",
+    "kind": "cover"
   },
   {
     "name": "book-032.webp",
-    "source": "PetLovePro_Colecoes_05_e_06/colecao_05/032_enriquecimento_ambiental_para_gatos.pdf"
+    "source": "colecao-05/book-032/book-032.webp",
+    "kind": "cover"
   },
   {
     "name": "book-033.webp",
-    "source": "PetLovePro_Colecoes_05_e_06/colecao_05/033_brincadeiras_e_jogos_para_pets.pdf"
+    "source": "colecao-05/book-033/book-033.webp",
+    "kind": "cover"
   },
   {
     "name": "book-034.webp",
-    "source": "PetLovePro_Colecoes_05_e_06/colecao_05/034_brinquedos_caseiros_e_criativos_para_caes_e_gatos.pdf"
+    "source": "colecao-05/book-034/book-034.webp",
+    "kind": "cover"
   },
   {
     "name": "book-035.webp",
-    "source": "PetLovePro_Colecoes_05_e_06/colecao_05/035_como_manter_seu_pet_feliz_em_apartamentos.pdf"
+    "source": "colecao-05/book-035/book-035.webp",
+    "kind": "cover"
   },
   {
     "name": "book-036.webp",
-    "source": "PetLovePro_Colecoes_07_a_10/colecao_08/036_transformando_sua_casa_em_um_ambiente_pet_friendly.pdf"
+    "source": "colecao-08/book-036/book-036.webp",
+    "kind": "cover"
   },
   {
     "name": "book-037.webp",
-    "source": "PetLovePro_Colecoes_07_a_10/colecao_08/037_criancas_e_pets_uma_convivencia_saudavel.pdf"
+    "source": "colecao-08/book-037/book-037.webp",
+    "kind": "cover"
   },
   {
     "name": "book-038.webp",
-    "source": "PetLovePro_Colecoes_07_a_10/colecao_08/038_como_fazer_caes_e_gatos_conviverem_em_harmonia.pdf"
+    "source": "colecao-08/book-038/book-038.webp",
+    "kind": "cover"
   },
   {
     "name": "book-039.webp",
-    "source": "PetLovePro_Colecoes_07_a_10/colecao_08/039_viajando_com_seu_pet.pdf"
+    "source": "colecao-08/book-039/book-039.webp",
+    "kind": "cover"
   },
   {
     "name": "book-040.webp",
-    "source": "PetLovePro_Colecoes_07_a_10/colecao_08/040_como_cuidar_de_pets_em_uma_rotina_corrida.pdf"
+    "source": "colecao-08/book-040/book-040.webp",
+    "kind": "cover"
   },
   {
     "name": "book-041.webp",
-    "source": "PetLovePro_Colecoes_01_e_02_v0.3.0/colecao_02/041_biscoitos_naturais_para_caes.pdf"
+    "source": "colecao-02/book-041/book-041.webp",
+    "kind": "cover"
   },
   {
     "name": "book-042.webp",
-    "source": "PetLovePro_Colecoes_01_e_02_v0.3.0/colecao_02/042_petiscos_naturais_para_gatos.pdf"
+    "source": "colecao-02/book-042/book-042.webp",
+    "kind": "cover"
   },
   {
     "name": "book-043.webp",
-    "source": "PetLovePro_Colecoes_01_e_02_v0.3.0/colecao_02/043_receitas_refrescantes_para_pets.pdf"
+    "source": "colecao-02/book-043/book-043.webp",
+    "kind": "cover"
   },
   {
     "name": "book-044.webp",
-    "source": "PetLovePro_Colecoes_01_e_02_v0.3.0/colecao_02/044_receitas_para_aniversarios_e_ocasioes_especiais.pdf"
+    "source": "colecao-02/book-044/book-044.webp",
+    "kind": "cover"
   },
   {
     "name": "book-045.webp",
-    "source": "PetLovePro_Colecoes_01_e_02_v0.3.0/colecao_02/045_alimentacao_complementar_alergias_e_sensibilidades.pdf"
+    "source": "colecao-02/book-045/book-045.webp",
+    "kind": "cover"
   },
   {
     "name": "book-046.webp",
-    "source": "PetLovePro_Colecoes_07_a_10/colecao_10/046_guia_essencial_dos_caes.pdf"
+    "source": "colecao-10/book-046/book-046.webp",
+    "kind": "cover"
   },
   {
     "name": "book-047.webp",
-    "source": "PetLovePro_Colecoes_07_a_10/colecao_10/047_guia_essencial_dos_gatos.pdf"
+    "source": "colecao-10/book-047/book-047.webp",
+    "kind": "cover"
   },
   {
     "name": "book-048.webp",
-    "source": "PetLovePro_Colecoes_07_a_10/colecao_10/048_um_ano_de_cuidados_com_seu_pet.pdf"
+    "source": "colecao-10/book-048/book-048.webp",
+    "kind": "cover"
   },
   {
     "name": "book-049.webp",
-    "source": "PetLovePro_Colecoes_07_a_10/colecao_10/049_manual_financeiro_do_tutor_de_pets.pdf"
+    "source": "colecao-10/book-049/book-049.webp",
+    "kind": "cover"
   },
   {
     "name": "book-050.webp",
-    "source": "PetLovePro_Colecoes_07_a_10/colecao_10/050_o_guia_do_tutor_extraordinario.pdf"
+    "source": "colecao-10/book-050/book-050.webp",
+    "kind": "cover"
   },
   {
     "name": "collection-01.webp",
-    "source": "PetLovePro_Colecoes_01_e_02_v0.3.0/PetLovePro_Colecao_01_v0.3.0.pdf"
+    "source": "colecao-01/collection-01.webp",
+    "kind": "cover"
+  },
+  {
+    "name": "presentation-01.webp",
+    "source": "colecao-01/apresentacao.webp",
+    "kind": "presentation"
   },
   {
     "name": "collection-02.webp",
-    "source": "PetLovePro_Colecoes_01_e_02_v0.3.0/PetLovePro_Colecao_02_v0.3.0.pdf"
+    "source": "colecao-02/collection-02.webp",
+    "kind": "cover"
+  },
+  {
+    "name": "presentation-02.webp",
+    "source": "colecao-02/apresentacao.webp",
+    "kind": "presentation"
   },
   {
     "name": "collection-03.webp",
-    "source": "PetLovePro_Colecoes_03_e_04/PetLovePro_Colecao_03.pdf"
+    "source": "colecao-03/collection-03.webp",
+    "kind": "cover"
+  },
+  {
+    "name": "presentation-03.webp",
+    "source": "colecao-03/apresentacao.webp",
+    "kind": "presentation"
   },
   {
     "name": "collection-04.webp",
-    "source": "PetLovePro_Colecoes_03_e_04/PetLovePro_Colecao_04.pdf"
+    "source": "colecao-04/collection-04.webp",
+    "kind": "cover"
+  },
+  {
+    "name": "presentation-04.webp",
+    "source": "colecao-04/apresentacao.webp",
+    "kind": "presentation"
   },
   {
     "name": "collection-05.webp",
-    "source": "PetLovePro_Colecoes_05_e_06/PetLovePro_Colecao_05.pdf"
+    "source": "colecao-05/collection-05.webp",
+    "kind": "cover"
+  },
+  {
+    "name": "presentation-05.webp",
+    "source": "colecao-05/apresentacao.webp",
+    "kind": "presentation"
   },
   {
     "name": "collection-06.webp",
-    "source": "PetLovePro_Colecoes_05_e_06/PetLovePro_Colecao_06.pdf"
+    "source": "colecao-06/collection-06.webp",
+    "kind": "cover"
+  },
+  {
+    "name": "presentation-06.webp",
+    "source": "colecao-06/apresentacao.webp",
+    "kind": "presentation"
   },
   {
     "name": "collection-07.webp",
-    "source": "PetLovePro_Colecoes_07_a_10/PetLovePro_Colecao_07.pdf"
+    "source": "colecao-07/collection-07.webp",
+    "kind": "cover"
+  },
+  {
+    "name": "presentation-07.webp",
+    "source": "colecao-07/apresentacao.webp",
+    "kind": "presentation"
   },
   {
     "name": "collection-08.webp",
-    "source": "PetLovePro_Colecoes_07_a_10/PetLovePro_Colecao_08.pdf"
+    "source": "colecao-08/collection-08.webp",
+    "kind": "cover"
+  },
+  {
+    "name": "presentation-08.webp",
+    "source": "colecao-08/apresentacao.webp",
+    "kind": "presentation"
   },
   {
     "name": "collection-09.webp",
-    "source": "PetLovePro_Colecoes_07_a_10/PetLovePro_Colecao_09.pdf"
+    "source": "colecao-09/collection-09.webp",
+    "kind": "cover"
+  },
+  {
+    "name": "presentation-09.webp",
+    "source": "colecao-09/apresentacao.webp",
+    "kind": "presentation"
   },
   {
     "name": "collection-10.webp",
-    "source": "PetLovePro_Colecoes_07_a_10/PetLovePro_Colecao_10.pdf"
+    "source": "colecao-10/collection-10.webp",
+    "kind": "cover"
+  },
+  {
+    "name": "presentation-10.webp",
+    "source": "colecao-10/apresentacao.webp",
+    "kind": "presentation"
+  },
+  {
+    "name": "visual-dupla.webp",
+    "source": "acervo-visual/dupla.jpg",
+    "kind": "photo"
+  },
+  {
+    "name": "visual-gato.webp",
+    "source": "acervo-visual/gato.jpg",
+    "kind": "photo"
+  },
+  {
+    "name": "visual-cozinha.webp",
+    "source": "acervo-visual/cozinha.jpg",
+    "kind": "photo"
   }
 ]

@@ -46,7 +46,25 @@
   },
   "functions": {
     "source": "functions",
-    "runtime": "nodejs22"
+    "runtime": "nodejs22",
+    "ignore": [
+      "node_modules",
+      ".git",
+      "firebase-debug.log",
+      "firebase-debug.*.log",
+      "**/*.local",
+      "**/*.pdf",
+      "**/*.epub",
+      "**/*.zip",
+      "**/*.md",
+      "**/ebook.html",
+      "**/cole\u00e7\u00f5es/**",
+      "**/colecoes/**",
+      "**/private/**",
+      "**/controle-editorial/**",
+      "**/bonus/**",
+      "**/*.local.json"
+    ]
   },
   "emulators": {
     "auth": {

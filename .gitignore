@@ -1,39 +1,36 @@
-# Dependencies
 node_modules/
-
-# Firebase
 .firebase/
-firebase-debug*.log
-firestore-debug*.log
-
-# Secrets
-.env
-.env.*
+.firebaserc
+firebase-debug.log*
+firestore-debug.log*
+ui-debug.log*
+.env*
 !.env.example
-.secret.local
-*service-account*.json
-*firebase-adminsdk*.json
-*.pem
-*.key
+*.local
+service-account*.json
+campaign-export*.csv
 
-# Private editorial content
+# Arquivos editoriais privados (não versionar)
 /coleções/
 /colecoes/
-*.pdf
-*.zip
-
-# Python
-__pycache__/
-*.pyc
+/private/
+**/*.pdf
+**/*.epub
 .venv/
+__pycache__/
 
-# IDE
-.vscode/
-.idea/
+# Additional private publication formats and credentials
+**/ebook.html
+**/ebook.md
+**/demonstracao.pdf
+**/colecao-completa.pdf
+**/bonus/
+**/controle-editorial/
+**/*.zip
+**/*.pem
+**/*.key
+.secret*
+*firebase-adminsdk*.json
 
-# Operating system
-.DS_Store
-Thumbs.db
-
-# Logs
-*.log
+# Local commercial configuration
+*.local.json

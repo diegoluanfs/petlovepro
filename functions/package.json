@@ -1,6 +1,6 @@
 {
   "name": "petlovepro-functions",
-  "version": "0.4.1",
+  "version": "0.4.4",
   "private": true,
   "main": "index.cjs",
   "engines": {

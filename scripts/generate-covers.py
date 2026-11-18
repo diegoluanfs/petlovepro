@@ -1,32 +1,31 @@
-"""Render ONLY the first page of each local PDF to a small, flattened public WebP."""
+"""Import only allowlisted public imagery from the structured editorial archive.
+Never traverse or copy editorial documents. Re-encode pixels to WebP (no metadata).
+"""
 import argparse
 import json
-from pathlib import Path
 import tempfile
-from io import BytesIO
-import fitz
-from PIL import Image, ImageDraw, ImageFont
+from pathlib import Path
+from PIL import Image, ImageOps
 
 ROOT = Path(__file__).resolve().parents[1]
 PLAN = json.loads((ROOT / 'scripts/cover-plan.json').read_text(encoding='utf-8'))
 PUBLIC = ROOT / 'public'
 
 
-def generate(source, output):
-    with fitz.open(source) as doc:
-        if doc.needs_pass or len(doc) == 0:
-            raise ValueError(f'PDF sem primeira página acessível: {source.name}')
-        page = doc[0]
-        scale = min(640 / page.rect.width, 900 / page.rect.height)
-        pix = page.get_pixmap(matrix=fitz.Matrix(scale, scale), alpha=False)
-        with Image.open(BytesIO(pix.tobytes('png'))) as raw:
-            image = raw.convert('RGB')
-        # Create a new raster without metadata, hyperlinks, layers or embedded files.
-        banner = Image.new('RGB', (image.width, image.height + 27), '#321466')
-        banner.paste(image, (0, 0))
-        draw = ImageDraw.Draw(banner)
-        draw.text((image.width / 2, image.height + 13), 'PETLOVEPRO | CAPA PROMOCIONAL', fill='white', font=ImageFont.load_default(), anchor='mm')
-        banner.save(output, 'WEBP', quality=82, method=6)
+def render(source, output, kind):
+    with Image.open(source) as raw:
+        expected = 'WEBP' if source.suffix == '.webp' else 'JPEG'
+        if raw.format != expected or getattr(raw, 'n_frames', 1) != 1:
+            raise ValueError(f'Formato incorreto ou imagem animada: {source.name}')
+        if raw.width * raw.height > 30_000_000:
+            raise ValueError(f'Imagem grande demais: {source.name}')
+        limit = (640, 900) if kind == 'cover' else (1200, 1200)
+        img = ImageOps.exif_transpose(raw).convert('RGB')
+        img.thumbnail(limit, Image.Resampling.LANCZOS)
+        # New raster, no EXIF, embedded content or trailing bytes from the source.
+        flat = Image.new('RGB', img.size)
+        flat.paste(img)
+        flat.save(output, 'WEBP', quality=84, method=4)
 
 
 def main():
@@ -34,27 +33,29 @@ def main():
     parser.add_argument('--source', type=Path, default=ROOT / 'coleções')
     args = parser.parse_args()
     source = args.source.resolve(strict=True)
-    if source == PUBLIC.resolve() or PUBLIC.resolve() in source.parents:
-        raise SystemExit('ERRO: a pasta com PDFs deve ficar fora de public/.')
+    public = PUBLIC.resolve(strict=True)
+    if public == source or public in source.parents or source in public.parents:
+        raise SystemExit('ERRO: o acervo deve ser separado de public/.')
     output = PUBLIC / 'assets' / 'covers'
-    if output.resolve() != output.absolute() or PUBLIC.resolve() != PUBLIC.absolute():
-        raise SystemExit('ERRO: diretório público não pode ser um link simbólico.')
+    for folder in [PUBLIC, PUBLIC / 'assets', output]:
+        if folder.is_symlink() or folder.resolve() != folder.absolute():
+            raise SystemExit('ERRO: caminho público não pode conter links.')
     paths = []
     for item in PLAN:
-        p = (source / item['source']).resolve()
-        if not p.is_relative_to(source) or not p.is_file():
-            raise SystemExit(f"ERRO: arquivo ausente ou inválido: {item['source']}")
-        paths.append((p, item['name']))
-    # Validate and render the complete inventory before replacing any existing image.
+        p = source / item['source']
+        if p.resolve() != p.absolute() or not p.is_file():
+            raise SystemExit(f"ERRO: imagem ausente ou link não permitido: {item['source']}")
+        paths.append((p, item['name'], item['kind']))
+    # All files validated and encoded before publishing any replacement.
     with tempfile.TemporaryDirectory(dir=ROOT) as tmp:
         temp = Path(tmp)
-        for p, name in paths:
-            generate(p, temp / name)
+        for p, name, kind in paths:
+            render(p, temp / name, kind)
             print(f'OK {name}')
         output.mkdir(parents=True, exist_ok=True)
-        for _, name in paths:
+        for _, name, _ in paths:
             (temp / name).replace(output / name)
-    print(f'{len(paths)} capas geradas. Nenhum PDF copiado para public/.')
+    print(f'{len(paths)} imagens promocionais geradas. Nenhum livro ou documento copiado.')
 
 if __name__ == '__main__':
     main()

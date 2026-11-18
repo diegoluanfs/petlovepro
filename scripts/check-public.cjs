@@ -15,7 +15,7 @@ function inspect(dir,{requireCovers=false}={}){
  seen.add(rel);
  const b=fs.readFileSync(abs);
  if(b.subarray(0,5).toString()==='%PDF-')errors.push(`PDF disfarçado: ${rel}`);
- if(covers.has(rel)&&(b.length<12||b.subarray(0,4).toString()!=='RIFF'||b.subarray(8,12).toString()!=='WEBP'))errors.push(`Capa não é WebP: ${rel}`);
+ if(covers.has(rel)&&(b.length<20||b.subarray(0,4).toString()!=='RIFF'||b.subarray(8,12).toString()!=='WEBP'||b.readUInt32LE(4)+8!==b.length))errors.push(`Capa não é WebP válido ou possui dados extras: ${rel}`);
  }}
  if(fs.lstatSync(dir).isSymbolicLink())return ['Pasta public não pode ser link.'];
  walk(dir);

@@ -714,6 +714,7 @@ export const collections = [
     "price": null,
     "live": false,
     "cover": "collection-01.webp",
+    "presentation": "presentation-01.webp",
     "kind": "collection"
   },
   {
@@ -727,6 +728,7 @@ export const collections = [
     "price": null,
     "live": false,
     "cover": "collection-02.webp",
+    "presentation": "presentation-02.webp",
     "kind": "collection"
   },
   {
@@ -740,6 +742,7 @@ export const collections = [
     "price": null,
     "live": false,
     "cover": "collection-03.webp",
+    "presentation": "presentation-03.webp",
     "kind": "collection"
   },
   {
@@ -753,6 +756,7 @@ export const collections = [
     "price": null,
     "live": false,
     "cover": "collection-04.webp",
+    "presentation": "presentation-04.webp",
     "kind": "collection"
   },
   {
@@ -766,6 +770,7 @@ export const collections = [
     "price": null,
     "live": false,
     "cover": "collection-05.webp",
+    "presentation": "presentation-05.webp",
     "kind": "collection"
   },
   {
@@ -779,6 +784,7 @@ export const collections = [
     "price": null,
     "live": false,
     "cover": "collection-06.webp",
+    "presentation": "presentation-06.webp",
     "kind": "collection"
   },
   {
@@ -792,6 +798,7 @@ export const collections = [
     "price": null,
     "live": false,
     "cover": "collection-07.webp",
+    "presentation": "presentation-07.webp",
     "kind": "collection"
   },
   {
@@ -805,6 +812,7 @@ export const collections = [
     "price": null,
     "live": false,
     "cover": "collection-08.webp",
+    "presentation": "presentation-08.webp",
     "kind": "collection"
   },
   {
@@ -818,6 +826,7 @@ export const collections = [
     "price": null,
     "live": false,
     "cover": "collection-09.webp",
+    "presentation": "presentation-09.webp",
     "kind": "collection"
   },
   {
@@ -831,6 +840,7 @@ export const collections = [
     "price": null,
     "live": false,
     "cover": "collection-10.webp",
+    "presentation": "presentation-10.webp",
     "kind": "collection"
   }
 ].map(c=>({...c,topics:books.filter(b=>b.collectionId===c.id).map(b=>b.title)}));
