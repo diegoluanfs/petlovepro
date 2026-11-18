@@ -34,3 +34,6 @@ __pycache__/
 
 # Local commercial configuration
 *.local.json
+
+# Cloudflare Wrangler
+.wrangler/
