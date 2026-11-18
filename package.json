@@ -1,0 +1,13 @@
+{
+  "name": "petlovepro",
+  "version": "0.4.2",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/*.test.cjs",
+    "dev": "node scripts/check-public.cjs && python -m http.server 5173 --directory public",
+    "covers": "python scripts/generate-covers.py",
+    "check:public": "node scripts/check-public.cjs",
+    "check:release": "node scripts/check-public.cjs --require-covers"
+  }
+}

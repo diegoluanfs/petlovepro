@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+
+# Firebase
+.firebase/
+firebase-debug*.log
+firestore-debug*.log
+
+# Secrets
+.env
+.env.*
+!.env.example
+.secret.local
+*service-account*.json
+*firebase-adminsdk*.json
+*.pem
+*.key
+
+# Private editorial content
+/coleções/
+/colecoes/
+*.pdf
+*.zip
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# IDE
+.vscode/
+.idea/
+
+# Operating system
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
