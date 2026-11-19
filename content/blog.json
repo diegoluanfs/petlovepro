@@ -1,0 +1,80 @@
+[
+  {
+    "slug":"passeios-com-caes",
+    "title":"Como tornar o passeio com seu cão mais interessante e seguro",
+    "description":"Aprenda a planejar passeios com cães, respeitar o ritmo do animal e aproveitar momentos de exploração sem complicar a rotina.",
+    "category":"Cães", "collection":"05", "image":"visual-dupla.webp", "alt":"Cão e gato do acervo editorial PetLovePro",
+    "intro":"Um bom passeio não precisa ser uma competição de distância. Ele pode ser um momento de exploração, movimento e convivência. O segredo é observar o cão e adaptar o trajeto ao que ele consegue fazer confortavelmente.",
+    "sections":[
+      {"heading":"Prepare o passeio antes de sair", "paragraphs":["Separe guia, equipamento de contenção adequado, água e sacos para recolher fezes. Escolha um horário e um caminho compatíveis com o clima, com a movimentação da rua e com as características do seu cão. Se o animal tem alguma limitação de saúde, peça orientação ao veterinário antes de mudar o nível de atividade."]},
+      {"heading":"Reserve tempo para explorar", "paragraphs":["Em um trecho tranquilo, permita que o cão pare para investigar cheiros, mantendo a guia segura. Não é necessário seguir sempre a mesma velocidade. Alterne momentos de caminhada com pausas em áreas apropriadas. Evite deixá-lo investigar lixo, objetos cortantes ou substâncias desconhecidas.","Um exemplo de organização é escolher um percurso curto conhecido e reservar uma parte dele para exploração. Em outro dia, experimente uma pequena variação do caminho, desde que o cão se mostre confortável. O objetivo não é cansá-lo a qualquer custo."]},
+      {"heading":"O que registrar depois de voltar", "paragraphs":["Anote quais trajetos foram bem aceitos, o que causou desconforto e em quais horários o passeio foi mais tranquilo. Use essas informações para planejar o próximo dia. Alterações persistentes na disposição ou sinais de dor merecem avaliação profissional."]}
+    ],"checklist":["Conferir clima e equipamento.","Respeitar o ritmo e as pausas do cão.","Recolher fezes e evitar situações de risco.","Anotar o que funcionou no passeio."],
+    "sources":[{"name":"VCA Animal Hospitals — Dog Behavior and Training: Play and Exercise","url":"https://vcahospitals.com/chancellor/know-your-pet/dog-behavior-and-training---play-and-exercise"},{"name":"AVMA — Warm weather pet safety","url":"https://avma.org/resources/pet-owners/petcare/warm-weather-pet-safety"}]
+  },
+  {
+    "slug":"enriquecimento-ambiental-para-gatos",
+    "title":"Enriquecimento ambiental para gatos: ideias para dentro de casa",
+    "description":"Organize espaços de descanso, brincadeiras e exploração para seu gato com recursos simples, seguros e adequados ao ambiente doméstico.",
+    "category":"Gatos", "collection":"05", "image":"visual-gato.webp", "alt":"Gato do acervo editorial PetLovePro",
+    "intro":"Você não precisa transformar toda a casa para oferecer uma rotina interessante ao gato. Pequenas mudanças, feitas com atenção à segurança e às preferências do animal, podem criar novas oportunidades de brincar, investigar e descansar.",
+    "sections":[
+      {"heading":"Comece pelos espaços que ele já usa", "paragraphs":["Observe onde o gato escolhe dormir, se esconder e circular. Deixe áreas tranquilas disponíveis e ofereça arranhadores em locais de fácil acesso. Se instalar plataformas, verifique a estabilidade e a possibilidade de subir e descer sem risco. Janelas e varandas precisam de proteção apropriada."]},
+      {"heading":"Brincadeiras que cabem na rotina", "paragraphs":["Uma caixa de papelão limpa, sem grampos, fitas soltas ou partes perigosas, pode funcionar como esconderijo. Brinquedos próprios para gatos permitem simular movimentos de caça com supervisão. Guarde varinhas e brinquedos com cordões depois de brincar para evitar ingestão acidental.","Experimente apresentar um brinquedo por vez e alterná-los ao longo da semana. Se o gato não quiser interagir, não force. Ofereça uma alternativa em outro momento e observe o que desperta interesse."]},
+      {"heading":"Crie um pequeno mapa da casa", "paragraphs":["Identifique um ponto para repouso, outro para atividade e locais adequados para água, comida e caixa sanitária. Quando há mais de um gato, observe se todos conseguem chegar aos recursos sem serem bloqueados por outro animal. Mudanças súbitas de comportamento precisam de atenção veterinária, e não apenas de novos brinquedos."]}
+    ],"checklist":["Revisar segurança de janelas e móveis.","Manter locais de descanso e arranhadores.","Supervisionar brincadeiras com fios.","Alternar brinquedos conforme o interesse."],
+    "sources":[{"name":"Cornell Feline Health Center — Safe toys and gifts","url":"https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/safe-toys-and-gifts"},{"name":"VCA Animal Hospitals — Enrichment and Activity Toys","url":"https://vcahospitals.com/know-your-pet/behavior-management-enrichment-and-activity-toys"}]
+  },
+  {
+    "slug":"organizar-rotina-de-cuidados-pet",
+    "title":"Como organizar uma rotina de cuidados para cães e gatos",
+    "description":"Monte uma rotina simples de alimentação, higiene, brincadeiras e acompanhamento veterinário sem depender de uma agenda complicada.",
+    "category":"Cães e gatos", "collection":"06", "image":"visual-dupla.webp", "alt":"Cão e gato do acervo editorial PetLovePro",
+    "intro":"A rotina de um tutor não precisa ser perfeita para ser útil. Um sistema simples ajuda a distribuir responsabilidades e a perceber quando algo sai do habitual. O mais importante é que as necessidades de cada animal sejam atendidas.",
+    "sections":[
+      {"heading":"Divida o dia em momentos", "paragraphs":["Pela manhã, confira água, alimentação conforme a orientação profissional e as condições do ambiente. Reserve períodos adequados para atividade e descanso. Ao final do dia, faça uma nova conferência dos recursos e organize o que será necessário na manhã seguinte.","Se duas pessoas cuidam do mesmo animal, combinem quem realiza cada tarefa. Marcar uma refeição como concluída, por exemplo, evita que alguém ofereça a mesma porção novamente por engano."]},
+      {"heading":"Separe o que é diário do que é periódico", "paragraphs":["Mantenha uma lista curta para tarefas repetidas e outra para compromissos como reposição de alimentos, limpeza de acessórios e consultas. O calendário de vacinas, controle de parasitas e outros cuidados preventivos deve ser definido com o médico-veterinário, pois depende do histórico e do contexto do pet."]},
+      {"heading":"Use um registro que você consegue manter", "paragraphs":["Um caderno, calendário ou aplicativo de tarefas serve. Registre apenas informações úteis: refeições, compromissos e mudanças notáveis no comportamento. Não use anotações antigas para diagnosticar doenças. Leve o registro às consultas quando ele puder ajudar o profissional a entender o histórico.","Revise a divisão de tarefas semanalmente e simplifique o que ficou difícil de cumprir. Uma rotina sustentável é mais valiosa do que um planejamento complexo abandonado depois de poucos dias."]}
+    ],"checklist":["Conferir água e recursos de uso diário.","Combinar responsáveis pelas tarefas.","Guardar contatos e agenda veterinária.","Revisar o planejamento uma vez por semana."],
+    "sources":[{"name":"AVMA — Selecting a pet dog","url":"https://avma.org/resources/pet-owners/petcare/selecting-pet-dog"},{"name":"Cornell Feline Health Center — Choosing and caring for your new cat","url":"https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/choosing-and-caring-for-your-new-cat"}]
+  },
+  {
+    "slug":"petiscos-na-rotina-de-caes-e-gatos",
+    "title":"Petiscos para cães e gatos: como incluí-los com responsabilidade",
+    "description":"Entenda como organizar o uso de petiscos na rotina, evitar excessos e conversar com o veterinário sobre escolhas adequadas ao seu pet.",
+    "category":"Cães e gatos", "collection":"02", "image":"visual-cozinha.webp", "alt":"Ambiente de preparo de alimentos do acervo PetLovePro",
+    "intro":"Petiscos podem fazer parte da interação com o animal, mas não devem substituir a alimentação completa e equilibrada. Antes de experimentar ingredientes ou produtos novos, considere as necessidades individuais do pet e eventuais restrições alimentares.",
+    "sections":[
+      {"heading":"Planeje antes de oferecer", "paragraphs":["Converse com o médico-veterinário sobre quais petiscos são adequados e como integrá-los à alimentação diária. Um animal em dieta terapêutica, em crescimento ou com histórico de reações alimentares pode precisar de orientações específicas. Não presuma que um ingrediente seguro para pessoas seja seguro para cães ou gatos."]},
+      {"heading":"Organize as recompensas da família", "paragraphs":["Quando várias pessoas oferecem petiscos sem conversar, fica difícil acompanhar o consumo. Uma solução é separar previamente a quantidade autorizada para aquele dia e registrar quando uma parte for usada. Isso ajuda a manter a rotina consistente, sem precisar recorrer a cálculos improvisados.","Em atividades de treino, avalie também recompensas sem alimento, como uma brincadeira que o pet aprecie. Não insista em oferecer comida se ele não tiver interesse. O reforço deve ser adequado ao indivíduo e à situação."]},
+      {"heading":"Evite transformar uma receita em dieta completa", "paragraphs":["Receitas de petiscos e refeições ocasionais não são automaticamente formuladas para suprir todas as necessidades nutricionais. Se a intenção é mudar a alimentação principal para uma dieta caseira, busque avaliação de um profissional qualificado em nutrição veterinária. Leve a lista de produtos e alimentos que seu animal já recebe para facilitar essa conversa."]}
+    ],"checklist":["Confirmar ingredientes e quantidade com o veterinário.","Registrar recompensas oferecidas durante o dia.","Respeitar restrições da dieta principal.","Não substituir refeições por petiscos."],
+    "sources":[{"name":"WSAVA — Global Nutrition Guidelines e Nutritional Toolkit","url":"https://wsava.org/global-guidelines/global-nutrition-guidelines/"},{"name":"VCA Animal Hospitals — Enriching your pet’s environment with their food","url":"https://vcahospitals.com/know-your-pet/enriching-your-pets-environment-with-their-food"}]
+  },
+  {
+    "slug":"preparar-casa-para-adocao",
+    "title":"Vai adotar um cão ou gato? Prepare a casa antes da chegada",
+    "description":"Checklist de organização para receber um animal adotado, combinar responsabilidades e facilitar a adaptação ao novo lar.",
+    "category":"Cães e gatos", "collection":"07", "image":"visual-dupla.webp", "alt":"Cão e gato do acervo editorial PetLovePro",
+    "intro":"A adoção começa antes de o animal entrar em casa. Organizar o ambiente, os compromissos e as expectativas da família permite que os primeiros dias sejam mais previsíveis para todos.",
+    "sections":[
+      {"heading":"Converse com todos os moradores", "paragraphs":["Definam quem ficará responsável pela alimentação, higiene, atividade e acompanhamento veterinário. Avaliem o tempo disponível e os custos recorrentes, sem esquecer das despesas inesperadas. Peçam à instituição responsável pela adoção informações sobre o histórico, os hábitos e as necessidades do animal."]},
+      {"heading":"Prepare uma área inicial segura", "paragraphs":["Separe local para descanso, água, alimentação e higiene apropriada à espécie. Retire objetos que possam ser engolidos, proteja acessos a ruas e varandas e guarde produtos de limpeza fora do alcance. Para gatos, inclua locais onde possam se esconder voluntariamente e uma caixa sanitária acessível.","Não é necessário apresentar toda a casa e todos os visitantes de uma vez. Deixe o novo morador explorar espaços seguros no ritmo dele. Se já existem outros animais, mantenha recursos separados e procure orientação sobre apresentações graduais."]},
+      {"heading":"Planeje a primeira semana", "paragraphs":["Agende uma consulta veterinária e organize documentos e informações recebidos na adoção. Pergunte sobre hábitos anteriores, alimentação, identificação e cuidados preventivos. Reserve períodos tranquilos para interação e observação. Evite punições por comportamentos de adaptação e procure ajuda caso surjam conflitos ou sinais de sofrimento."]}
+    ],"checklist":["Combinar responsabilidades e orçamento.","Proteger saídas e guardar riscos domésticos.","Separar itens essenciais antes da chegada.","Organizar documentos e consulta veterinária."],
+    "sources":[{"name":"AVMA — Selecting a pet dog","url":"https://avma.org/resources/pet-owners/petcare/selecting-pet-dog"},{"name":"Cornell Feline Health Center — Choosing and caring for your new cat","url":"https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/choosing-and-caring-for-your-new-cat"}]
+  },
+  {
+    "slug":"viajar-de-carro-com-pet",
+    "title":"Viajar de carro com seu pet: o que organizar antes de sair",
+    "description":"Prepare uma viagem de carro com seu cão ou gato, considerando contenção, paradas, hospedagem e os itens essenciais para o trajeto.",
+    "category":"Cães e gatos", "collection":"08", "image":"visual-dupla.webp", "alt":"Cão e gato do acervo editorial PetLovePro",
+    "intro":"Uma viagem com animais exige mais planejamento do que simplesmente levar uma bolsa de acessórios. Pense no percurso, no conforto do pet e nas alternativas caso algum imprevisto aconteça.",
+    "sections":[
+      {"heading":"Confira a adequação da viagem", "paragraphs":["Converse com o veterinário se o pet tem histórico de enjoo, ansiedade ou alguma condição de saúde. Confirme as regras de transporte, de hospedagem e de documentação aplicáveis ao seu destino. Não administre sedativos ou medicamentos por conta própria."]},
+      {"heading":"Prepare o carro e os acessórios", "paragraphs":["Utilize uma caixa de transporte ou sistema de retenção apropriado ao animal e ao veículo, instalado conforme as instruções do fabricante. Evite que ele viaje solto, no colo do motorista ou com a cabeça para fora da janela. Organize água, alimento habitual, itens de higiene, identificação e contatos veterinários num local de fácil acesso.","Quando possível, familiarize o animal com o equipamento com antecedência. Faça experiências curtas e progressivas, respeitando sinais de desconforto. Um equipamento novo não precisa estrear na viagem mais longa do ano."]},
+      {"heading":"Planeje paradas e imprevistos", "paragraphs":["Escolha locais seguros para as pausas, principalmente se for necessário abrir portas e retirar o animal do veículo. Tenha a contenção pronta antes de abrir a saída. Nunca deixe o pet sozinho em um carro fechado. Verifique antecipadamente onde buscar assistência veterinária no caminho e no destino.","Ao chegar, organize água, descanso e recursos de higiene antes de iniciar outras atividades. A rotina familiar pode ajudar na adaptação ao novo ambiente."]}
+    ],"checklist":["Confirmar hospedagem e documentação.","Instalar contenção apropriada no veículo.","Separar água, alimento e identificação.","Planejar paradas e contatos de emergência."],
+    "sources":[{"name":"AVMA — Traveling with your dog or cat","url":"https://avma.org/resources-tools/pet-owners/petcare/traveling-your-pet-faq"},{"name":"AVMA — Warm weather pet safety","url":"https://avma.org/resources/pet-owners/petcare/warm-weather-pet-safety"}]
+  }
+]

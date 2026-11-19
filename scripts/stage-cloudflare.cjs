@@ -22,6 +22,7 @@ function stageCloudflare(source, parent) {
     fs.cpSync(source, output, { recursive: true, force: false, errorOnExist: true });
     assertPublic(output);
     require('./seo-pages.cjs').generateSeo(output);
+    require('./blog-pages.cjs').generateBlog(output);
     fs.writeFileSync(path.join(output, '_headers'), headers, { flag: 'wx' });
     fs.writeFileSync(path.join(output, '404.html'), notFound, { flag: 'wx' });
     return target;

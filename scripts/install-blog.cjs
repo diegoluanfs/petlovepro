@@ -1,0 +1,5 @@
+'use strict';
+const fs=require('node:fs'),path=require('node:path');
+const root=path.resolve(__dirname,'..');
+function install(dir=root){const rel='scripts/stage-cloudflare.cjs',file=path.join(dir,rel),previous=fs.readFileSync(file,'utf8');const anchor="    require('./seo-pages.cjs').generateSeo(output);",hook="    require('./blog-pages.cjs').generateBlog(output);";if(previous.includes(hook)){if(!previous.includes(anchor+'\n'+hook))throw Error('Ordem de geração inesperada.');return false;}if(previous.split(anchor).length!==2)throw Error('Instale primeiro a atualização SEO v1.');const backup=path.join(dir,'private/blog-backup',rel);fs.mkdirSync(path.dirname(backup),{recursive:true});if(!fs.existsSync(backup))fs.writeFileSync(backup,previous,{flag:'wx'});fs.writeFileSync(file,previous.replace(anchor,anchor+'\n'+hook));return true;}
+module.exports={install};if(require.main===module){try{console.log(install()?'Blog integrado ao deploy Cloudflare. Backup em private/blog-backup/.':'Blog já integrado.');}catch(e){console.error(e.message);process.exitCode=1;}}
