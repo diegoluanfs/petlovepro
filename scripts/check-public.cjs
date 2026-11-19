@@ -3,7 +3,7 @@ const root=path.resolve(__dirname,'..');
 const base=path.join(root,'public');
 const plan=require('./cover-plan.json');
 const covers=new Set(plan.map(p=>'assets/covers/'+p.name));
-const staticFiles=['index.html','styles.css','app.js','access.js','catalog.js','firebase-config.js','google-auth.js','robots.txt','sitemap.xml','assets/logo.svg','assets/google-g.svg','assets/hero.svg',...Array.from({length:5},(_,i)=>`assets/book-${String(i+1).padStart(3,'0')}.svg`)];
+const staticFiles=['index.html','ads.txt','analytics.css','analytics.js','styles.css','app.js','access.js','catalog.js','firebase-config.js','google-auth.js','robots.txt','sitemap.xml','assets/logo.svg','assets/google-g.svg','assets/hero.svg',...Array.from({length:5},(_,i)=>`assets/book-${String(i+1).padStart(3,'0')}.svg`)];
 const allowed=new Set([...staticFiles,...covers]);
 function inspect(dir,{requireCovers=false}={}){
  const seen=new Set();const errors=[];
