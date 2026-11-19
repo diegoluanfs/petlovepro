@@ -1,5 +1,5 @@
 // PetLovePro: basic consent mode. Keep advertising off until the CMP is configured.
-export const CONTAINER_ID = 'GTM-NNP2S2QS';
+export const CONTAINER_ID = 'GTM-PCVZ2MCT';
 export const ADS_CLIENT = 'ca-pub-9294489692358309';
 export const ADS_ENABLED = false;
 export const CONSENT_KEY = 'petlovepro.cookies.v2';

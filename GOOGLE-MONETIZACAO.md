@@ -12,7 +12,7 @@ npm run check:release
 O instalador adapta o HTML, a política de privacidade e a lista pública e cria/mescla `public/ads.txt`. Backups dos arquivos originais modificados ficam em `private/analytics-backup/`. Não altera Firebase, Kiwify, catálogo ou CI. Não adiciona dependências. Se detectar tags Google já coladas diretamente no HTML, para sem aplicar a transformação; não duplique tags. O v0.4.4 e o pacote CI Cloudflare foram usados como base de testes; adapte qualquer divergência do projeto atual antes de publicar.
 
 ## Analytics (Google Tag Manager)
-- Container `GTM-NNP2S2QS`. O site inicializa a dataLayer, envia consentimento negado por padrão e carrega GTM somente quando o visitante autoriza estatísticas em HTTPS no domínio oficial/apelido www.
+- Container `GTM-PCVZ2MCT`. O site inicializa a dataLayer, envia consentimento negado por padrão e carrega GTM somente quando o visitante autoriza estatísticas em HTTPS no domínio oficial/apelido www.
 - No painel GTM, crie a **Google tag** com o ID de medição `G-...` da propriedade GA4, acionador de todas as páginas e publique o container. Não use o ID GTM como ID GA4. Revise as tags do container: só Analytics nesta instalação, sem tags publicitárias, sem coleta de dados pessoais ou user-provided data. Não coloque o AdSense no GTM além do carregador deste pacote.
 - Verifique o Tag Assistant e o relatório Tempo real do GA4 em produção após aceitar estatísticas. Recuse em uma janela anônima e confira que gtm.js não é solicitado. Não são enviados eventos personalizados de comércio eletrônico nesta versão.
 
