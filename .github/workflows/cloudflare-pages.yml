@@ -45,15 +45,15 @@ jobs:
           echo "directory=$directory" >> "$GITHUB_OUTPUT"
       - name: Install Wrangler
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
-        working-directory: ${{ steps.stage.outputs.directory }}
+        working-directory: ${{ github.workspace }}
         run: npm install --no-save --no-package-lock --no-audit --no-fund wrangler@4.136.3
       - name: Deploy static site to Cloudflare Pages
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
-        working-directory: ${{ steps.stage.outputs.directory }}
+        working-directory: ${{ github.workspace }}
         env:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           WRANGLER_SEND_METRICS: 'false'
         run: |
           test -n "$CLOUDFLARE_ACCOUNT_ID" && test -n "$CLOUDFLARE_API_TOKEN" || { echo 'Configure Cloudflare secrets in GitHub Actions.'; exit 1; }
-          ./node_modules/.bin/wrangler pages deploy public --project-name=petlovepro --branch=main --commit-hash="$GITHUB_SHA"
+          ./node_modules/.bin/wrangler pages deploy "${{ steps.stage.outputs.directory }}" --project-name=petlovepro --branch=main --commit-hash="$GITHUB_SHA"
