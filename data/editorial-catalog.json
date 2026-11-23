@@ -1,0 +1,2409 @@
+{
+  "brand": "PetLovePro",
+  "version": "4.0.0-rc1",
+  "publishable": false,
+  "collections": [
+    {
+      "id": "collection-01",
+      "title": "Nutrição natural para pets",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "volumes": [
+        "book-001",
+        "book-002",
+        "book-003",
+        "book-004",
+        "book-005"
+      ],
+      "books": 5,
+      "pages": 82,
+      "original_cover": "collection-01.webp",
+      "collection_cover": "apresentacao.webp",
+      "pdf": "colecao-completa.pdf",
+      "price_brl": null,
+      "version": "4.0.0-rc1"
+    },
+    {
+      "id": "collection-02",
+      "title": "Guias especiais de alimentação",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "volumes": [
+        "book-041",
+        "book-042",
+        "book-043",
+        "book-044",
+        "book-045"
+      ],
+      "books": 5,
+      "pages": 100,
+      "original_cover": "collection-02.webp",
+      "collection_cover": "apresentacao.webp",
+      "pdf": "colecao-completa.pdf",
+      "price_brl": null,
+      "version": "4.0.0-rc1"
+    },
+    {
+      "id": "collection-03",
+      "title": "Comportamento e psicologia animal",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "volumes": [
+        "book-011",
+        "book-012",
+        "book-013",
+        "book-014",
+        "book-015"
+      ],
+      "books": 5,
+      "pages": 51,
+      "original_cover": "collection-03.webp",
+      "collection_cover": "apresentacao.webp",
+      "pdf": "colecao-completa.pdf",
+      "price_brl": null,
+      "version": "4.0.0-rc1"
+    },
+    {
+      "id": "collection-04",
+      "title": "Adestramento e educação",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "volumes": [
+        "book-016",
+        "book-017",
+        "book-018",
+        "book-019",
+        "book-020"
+      ],
+      "books": 5,
+      "pages": 53,
+      "original_cover": "collection-04.webp",
+      "collection_cover": "apresentacao.webp",
+      "pdf": "colecao-completa.pdf",
+      "price_brl": null,
+      "version": "4.0.0-rc1"
+    },
+    {
+      "id": "collection-05",
+      "title": "Exercícios e enriquecimento ambiental",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "volumes": [
+        "book-031",
+        "book-032",
+        "book-033",
+        "book-034",
+        "book-035"
+      ],
+      "books": 5,
+      "pages": 55,
+      "original_cover": "collection-05.webp",
+      "collection_cover": "apresentacao.webp",
+      "pdf": "colecao-completa.pdf",
+      "price_brl": null,
+      "version": "4.0.0-rc1"
+    },
+    {
+      "id": "collection-06",
+      "title": "Higiene e cuidados pessoais",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "volumes": [
+        "book-021",
+        "book-022",
+        "book-023",
+        "book-024",
+        "book-025"
+      ],
+      "books": 5,
+      "pages": 52,
+      "original_cover": "collection-06.webp",
+      "collection_cover": "apresentacao.webp",
+      "pdf": "colecao-completa.pdf",
+      "price_brl": null,
+      "version": "4.0.0-rc1"
+    },
+    {
+      "id": "collection-07",
+      "title": "Todas as fases da vida",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "volumes": [
+        "book-026",
+        "book-027",
+        "book-028",
+        "book-029",
+        "book-030"
+      ],
+      "books": 5,
+      "pages": 46,
+      "original_cover": "collection-07.webp",
+      "collection_cover": "apresentacao.webp",
+      "pdf": "colecao-completa.pdf",
+      "price_brl": null,
+      "version": "4.0.0-rc1"
+    },
+    {
+      "id": "collection-08",
+      "title": "Casa, família e estilo de vida",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "volumes": [
+        "book-036",
+        "book-037",
+        "book-038",
+        "book-039",
+        "book-040"
+      ],
+      "books": 5,
+      "pages": 46,
+      "original_cover": "collection-08.webp",
+      "collection_cover": "apresentacao.webp",
+      "pdf": "colecao-completa.pdf",
+      "price_brl": null,
+      "version": "4.0.0-rc1"
+    },
+    {
+      "id": "collection-09",
+      "title": "Saúde e prevenção",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "volumes": [
+        "book-006",
+        "book-007",
+        "book-008",
+        "book-009",
+        "book-010"
+      ],
+      "books": 5,
+      "pages": 46,
+      "original_cover": "collection-09.webp",
+      "collection_cover": "apresentacao.webp",
+      "pdf": "colecao-completa.pdf",
+      "price_brl": null,
+      "version": "4.0.0-rc1"
+    },
+    {
+      "id": "collection-10",
+      "title": "Tutores extraordinários",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "volumes": [
+        "book-046",
+        "book-047",
+        "book-048",
+        "book-049",
+        "book-050"
+      ],
+      "books": 5,
+      "pages": 58,
+      "original_cover": "collection-10.webp",
+      "collection_cover": "apresentacao.webp",
+      "pdf": "colecao-completa.pdf",
+      "price_brl": null,
+      "version": "4.0.0-rc1"
+    }
+  ],
+  "books": [
+    {
+      "id": "book-001",
+      "volume": 1,
+      "collection_id": "collection-01",
+      "title": "Receitas naturais saudáveis para pets",
+      "subtitle": "Um guia de carinho, segurança e alimentação complementar para cães e gatos",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 17,
+      "words_estimate": 2324,
+      "chapters": 5,
+      "recipe_cards": 10,
+      "benefits": [
+        "Comece pela alimentação completa",
+        "Dois pets, necessidades diferentes",
+        "Pequenos agrados, grandes cuidados",
+        "Uma cozinha segura",
+        "Uma rotina que dura"
+      ],
+      "description_short": "Um guia de carinho, segurança e alimentação complementar para cães e gatos.",
+      "description_long": "Seu primeiro passo para uma rotina alimentar mais consciente. Inclui 5 capítulos temáticos, 10 fichas culinárias de estudo, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-001.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-002",
+        "book-003",
+        "book-004",
+        "book-005"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-002",
+      "volume": 2,
+      "collection_id": "collection-01",
+      "title": "O grande livro de receitas naturais para cães",
+      "subtitle": "Preparações complementares e pequenos agrados para o seu melhor amigo",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 16,
+      "words_estimate": 2155,
+      "chapters": 5,
+      "recipe_cards": 10,
+      "benefits": [
+        "Cada cão é único",
+        "Ingredientes sem surpresas",
+        "Textura e tamanho fazem diferença",
+        "Recompensas que cabem na rotina",
+        "Saiba quando interromper"
+      ],
+      "description_short": "Preparações complementares e pequenos agrados para o seu melhor amigo.",
+      "description_long": "Carinho em pequenas porções, sempre com responsabilidade. Inclui 5 capítulos temáticos, 10 fichas culinárias de estudo, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-002.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-001",
+        "book-003",
+        "book-004",
+        "book-005"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-003",
+      "volume": 3,
+      "collection_id": "collection-01",
+      "title": "O grande livro de receitas naturais para gatos",
+      "subtitle": "Texturas delicadas, cuidados felinos e complementos preparados em casa",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 16,
+      "words_estimate": 2066,
+      "chapters": 5,
+      "recipe_cards": 10,
+      "benefits": [
+        "Respeite a nutrição felina",
+        "Textura antes do sabor",
+        "Um cantinho para cada gato",
+        "Um ingrediente conhecido de cada vez",
+        "Proteja o apetite habitual"
+      ],
+      "description_short": "Texturas delicadas, cuidados felinos e complementos preparados em casa.",
+      "description_long": "Para quem ama cada detalhe do universo felino. Inclui 5 capítulos temáticos, 10 fichas culinárias de estudo, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-003.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-001",
+        "book-002",
+        "book-004",
+        "book-005"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-004",
+      "volume": 4,
+      "collection_id": "collection-01",
+      "title": "Petiscos naturais e saudáveis para pets",
+      "subtitle": "Recompensas, diversão e momentos especiais para cães e gatos",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 16,
+      "words_estimate": 2044,
+      "chapters": 5,
+      "recipe_cards": 10,
+      "benefits": [
+        "O propósito de um petisco",
+        "Todos os agrados contam",
+        "Escolha formatos seguros",
+        "Fresquinho não é congelado",
+        "Festas com afeto, sem exagero"
+      ],
+      "description_short": "Recompensas, diversão e momentos especiais para cães e gatos.",
+      "description_long": "Pequenos momentos de alegria, sem exageros. Inclui 5 capítulos temáticos, 10 fichas culinárias de estudo, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-004.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-001",
+        "book-002",
+        "book-003",
+        "book-005"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-005",
+      "volume": 5,
+      "collection_id": "collection-01",
+      "title": "Alimentação saudável para pets gastando menos",
+      "subtitle": "Compras conscientes, organização da cozinha e menos desperdício",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 16,
+      "words_estimate": 2098,
+      "chapters": 5,
+      "recipe_cards": 10,
+      "benefits": [
+        "Primeiro, o alimento principal",
+        "Pese o que realmente aproveita",
+        "Separe antes de temperar",
+        "Conservar também é economizar",
+        "Revise o orçamento sem cortar cuidados"
+      ],
+      "description_short": "Compras conscientes, organização da cozinha e menos desperdício.",
+      "description_long": "Economizar é cuidar do que importa. Inclui 5 capítulos temáticos, 10 fichas culinárias de estudo, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-005.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-001",
+        "book-002",
+        "book-003",
+        "book-004"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-006",
+      "volume": 6,
+      "collection_id": "collection-09",
+      "title": "Guia da saúde dos cães",
+      "subtitle": "Observação cotidiana e prevenção responsável",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 9,
+      "words_estimate": 912,
+      "chapters": 5,
+      "recipe_cards": 0,
+      "benefits": [
+        "Saúde começa com observação",
+        "Consultas que fazem diferença",
+        "Vacinas e parasitas",
+        "Peso, boca e movimento",
+        "Quando procurar ajuda"
+      ],
+      "description_short": "Observação cotidiana e prevenção responsável.",
+      "description_long": "Um cão normalmente interessado no passeio passa a evitar a escada. Não é preciso interpretar a causa em casa. Registrar quando mudou e o que acontece em outras atividades ajuda a equipe veterinária a investigar. Inclui 5 capítulos temáticos, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-006.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-007",
+        "book-008",
+        "book-009",
+        "book-010"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-007",
+      "volume": 7,
+      "collection_id": "collection-09",
+      "title": "Guia da saúde dos gatos",
+      "subtitle": "Entenda os sinais discretos e organize a prevenção",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 9,
+      "words_estimate": 927,
+      "chapters": 5,
+      "recipe_cards": 0,
+      "benefits": [
+        "Observe os sinais silenciosos",
+        "A caixa de areia como informação",
+        "Alimentação e hidratação",
+        "Segurança e prevenção",
+        "Visitas menos estressantes"
+      ],
+      "description_short": "Entenda os sinais discretos e organize a prevenção.",
+      "description_long": "Uma tutora com dois gatos nota que há mais visitas à caixa, mas não sabe qual animal está urinando. Em vez de esperar vários dias, ela observa acesso às caixas e procura orientação. O histórico doméstico ajuda, mas não substitui exames. Inclui 5 capítulos temáticos, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-007.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-006",
+        "book-008",
+        "book-009",
+        "book-010"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-008",
+      "volume": 8,
+      "collection_id": "collection-09",
+      "title": "Primeiros socorros para pets",
+      "subtitle": "Reconheça emergências e prepare-se para buscar ajuda",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 9,
+      "words_estimate": 991,
+      "chapters": 5,
+      "recipe_cards": 0,
+      "benefits": [
+        "Antes de agir: segurança e transporte",
+        "Sinais que não podem esperar",
+        "Ferimentos e sangramento",
+        "Calor e intoxicações",
+        "Kit e prevenção"
+      ],
+      "description_short": "Reconheça emergências e prepare-se para buscar ajuda.",
+      "description_long": "Uma clínica habitual pode estar fechada à noite. O melhor momento para conhecer uma rota alternativa é quando todos estão bem. Tenha uma caixa de transporte adequada e uma maneira de pedir ajuda sem manipular à força um animal que sente dor. Inclui 5 capítulos temáticos, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-008.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-006",
+        "book-007",
+        "book-009",
+        "book-010"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-009",
+      "volume": 9,
+      "collection_id": "collection-09",
+      "title": "Prevenção de doenças e cuidados veterinários",
+      "subtitle": "Planeje hoje os cuidados que seu pet precisa",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 9,
+      "words_estimate": 894,
+      "chapters": 5,
+      "recipe_cards": 0,
+      "benefits": [
+        "Entenda prevenção por risco",
+        "Vacinação responsável",
+        "Parasitas e ambiente",
+        "Consultas produtivas",
+        "Proteção coletiva"
+      ],
+      "description_short": "Planeje hoje os cuidados que seu pet precisa.",
+      "description_long": "Um gato que vive dentro de casa e um cão que passeia todos os dias têm exposições diferentes. Mesmo assim, ambos precisam de plano preventivo individual. Uma carteira de saúde organizada reduz esquecimento sem transformar o calendário em prescrição. Inclui 5 capítulos temáticos, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-009.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-006",
+        "book-007",
+        "book-008",
+        "book-010"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-010",
+      "volume": 10,
+      "collection_id": "collection-09",
+      "title": "Controle de peso e prevenção da obesidade em pets",
+      "subtitle": "Hábitos sustentáveis com acompanhamento profissional",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 9,
+      "words_estimate": 899,
+      "chapters": 5,
+      "recipe_cards": 0,
+      "benefits": [
+        "O peso não conta toda a história",
+        "Conheça o consumo real",
+        "Plano individualizado",
+        "Movimento e interesse",
+        "Monitorar sem culpa"
+      ],
+      "description_short": "Hábitos sustentáveis com acompanhamento profissional.",
+      "description_long": "Um tutor percebe que seu cão ganhou peso e pensa em cortar metade da comida. Isso pode comprometer nutrientes e causar problemas, principalmente com restrições inadequadas. Um diário é mais útil que uma redução brusca sem acompanhamento. Inclui 5 capítulos temáticos, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-010.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-006",
+        "book-007",
+        "book-008",
+        "book-009"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-011",
+      "volume": 11,
+      "collection_id": "collection-03",
+      "title": "Entendendo a mente dos cães",
+      "subtitle": "Aprenda a observar, compreender e acolher o jeito de pensar do seu cão.",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 10,
+      "words_estimate": 1109,
+      "chapters": 5,
+      "recipe_cards": 0,
+      "benefits": [
+        "O mundo pelo nariz",
+        "Aprendizagem sem rótulos",
+        "Emoções e sinais discretos",
+        "Descanso e rotina previsível",
+        "Convivência e diferenças individuais"
+      ],
+      "description_short": "Aprenda a observar, compreender e acolher o jeito de pensar do seu cão.",
+      "description_long": "O comportamento é informação, não um julgamento sobre o caráter do animal. Este guia ensina a observar escolhas, reconhecer necessidades e construir rotinas que facilitem a convivência. Inclui 5 capítulos temáticos, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-011.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-012",
+        "book-013",
+        "book-014",
+        "book-015"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-012",
+      "volume": 12,
+      "collection_id": "collection-03",
+      "title": "Entendendo a mente dos gatos",
+      "subtitle": "Conheça o universo felino e ofereça escolhas que respeitam seus instintos.",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 10,
+      "words_estimate": 1095,
+      "chapters": 5,
+      "recipe_cards": 0,
+      "benefits": [
+        "Território e segurança",
+        "Arranhar faz parte da vida",
+        "Brincar como um predador",
+        "Comunicação e contato",
+        "Recursos para múltiplos gatos"
+      ],
+      "description_short": "Conheça o universo felino e ofereça escolhas que respeitam seus instintos.",
+      "description_long": "O gato é um companheiro com necessidades próprias. Entender seus hábitos permite reorganizar a casa sem transformar comportamentos naturais em problemas. Inclui 5 capítulos temáticos, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-012.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-011",
+        "book-013",
+        "book-014",
+        "book-015"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-013",
+      "volume": 13,
+      "collection_id": "collection-03",
+      "title": "A linguagem corporal dos pets",
+      "subtitle": "Observe os pequenos sinais antes de escolher como agir.",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 10,
+      "words_estimate": 1073,
+      "chapters": 5,
+      "recipe_cards": 0,
+      "benefits": [
+        "Leia o conjunto",
+        "Sinais caninos de afastamento",
+        "Sinais felinos de desconforto",
+        "Brincadeira ou conflito?",
+        "Como responder aos avisos"
+      ],
+      "description_short": "Observe os pequenos sinais antes de escolher como agir.",
+      "description_long": "Animais se comunicam com postura, movimento, sons e distância. Não existe um gesto isolado capaz de explicar tudo: o objetivo é interpretar padrões e responder com cuidado. Inclui 5 capítulos temáticos, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-013.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-011",
+        "book-012",
+        "book-014",
+        "book-015"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-014",
+      "volume": 14,
+      "collection_id": "collection-03",
+      "title": "Ansiedade, medo e estresse em animais domésticos",
+      "subtitle": "Reconheça sinais de sofrimento e organize uma rotina mais previsível.",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 10,
+      "words_estimate": 1080,
+      "chapters": 5,
+      "recipe_cards": 0,
+      "benefits": [
+        "Quando a preocupação vira sofrimento",
+        "Um refúgio de verdade",
+        "Ruídos e mudanças",
+        "Ausências e separação",
+        "A consulta comportamental"
+      ],
+      "description_short": "Reconheça sinais de sofrimento e organize uma rotina mais previsível.",
+      "description_long": "Este livro é um guia de observação e prevenção. Não oferece diagnóstico nem tratamento caseiro de transtornos. A avaliação veterinária é especialmente importante quando medo ou ansiedade comprometem a rotina. Inclui 5 capítulos temáticos, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-014.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-011",
+        "book-012",
+        "book-013",
+        "book-015"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-015",
+      "volume": 15,
+      "collection_id": "collection-03",
+      "title": "Construindo uma conexão emocional com seu pet",
+      "subtitle": "Pequenas escolhas diárias para uma relação de confiança e respeito.",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 10,
+      "words_estimate": 1038,
+      "chapters": 5,
+      "recipe_cards": 0,
+      "benefits": [
+        "Convivência com escolha",
+        "Rituais do dia a dia",
+        "Aprender juntos",
+        "Cuidados cooperativos",
+        "Vínculo em todas as fases"
+      ],
+      "description_short": "Pequenas escolhas diárias para uma relação de confiança e respeito.",
+      "description_long": "Confiança não é medida pelo número de abraços nem pela obediência. Ela cresce quando experiências são previsíveis e o pet pode participar das interações sem pressão. Inclui 5 capítulos temáticos, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-015.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-011",
+        "book-012",
+        "book-013",
+        "book-014"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-016",
+      "volume": 16,
+      "collection_id": "collection-04",
+      "title": "Adestramento de cães para iniciantes",
+      "subtitle": "Primeiros passos com recompensas, paciência e segurança.",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 10,
+      "words_estimate": 1054,
+      "chapters": 5,
+      "recipe_cards": 0,
+      "benefits": [
+        "Comece pelo ambiente",
+        "Atenção pelo nome",
+        "Sentar e permanecer por instantes",
+        "Vir quando chamado",
+        "Passeios com guia frouxa"
+      ],
+      "description_short": "Primeiros passos com recompensas, paciência e segurança.",
+      "description_long": "Ensinar é criar condições para que o cão descubra o que fazer. Aqui você encontrará práticas simples para começar, sem correções físicas, gritos ou intimidação. Inclui 5 capítulos temáticos, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-016.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-017",
+        "book-018",
+        "book-019",
+        "book-020"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-017",
+      "volume": 17,
+      "collection_id": "collection-04",
+      "title": "Adestramento avançado de cães",
+      "subtitle": "Evolua habilidades já aprendidas com precisão e respeito.",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 10,
+      "words_estimate": 1030,
+      "chapters": 5,
+      "recipe_cards": 0,
+      "benefits": [
+        "Defina critérios observáveis",
+        "Generalização planejada",
+        "Discriminação de sinais",
+        "Sequências e alvos",
+        "Transferência para o cotidiano"
+      ],
+      "description_short": "Evolua habilidades já aprendidas com precisão e respeito.",
+      "description_long": "Treino avançado não significa exigir mais a qualquer custo. A proposta é desenvolver respostas flexíveis em ambientes seguros, partindo de habilidades que o cão já demonstra com conforto. Inclui 5 capítulos temáticos, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-017.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-016",
+        "book-018",
+        "book-019",
+        "book-020"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-018",
+      "volume": 18,
+      "collection_id": "collection-04",
+      "title": "Como educar e treinar seu gato",
+      "subtitle": "Aprendizado cooperativo, brincadeiras e hábitos que respeitam os felinos.",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 10,
+      "words_estimate": 1053,
+      "chapters": 5,
+      "recipe_cards": 0,
+      "benefits": [
+        "Prepare uma sessão felina",
+        "Toque em um alvo",
+        "A caixa de transporte",
+        "Arranhador e caixa sanitária",
+        "Brincar para aprender"
+      ],
+      "description_short": "Aprendizado cooperativo, brincadeiras e hábitos que respeitam os felinos.",
+      "description_long": "Gatos podem aprender com consequências positivas. O treinamento deve ser voluntário, conectado às necessidades do ambiente e adaptado ao ritmo de cada indivíduo. Inclui 5 capítulos temáticos, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-018.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-016",
+        "book-017",
+        "book-019",
+        "book-020"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-019",
+      "volume": 19,
+      "collection_id": "collection-04",
+      "title": "Corrigindo problemas comportamentais de forma positiva",
+      "subtitle": "Aprenda a prevenir conflitos e ensinar alternativas sem punição.",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 10,
+      "words_estimate": 1060,
+      "chapters": 5,
+      "recipe_cards": 0,
+      "benefits": [
+        "Entenda antes de intervir",
+        "Latidos e estímulos externos",
+        "Pulos e atenção",
+        "Arranhaduras e eliminação felina",
+        "Proteção e encaminhamento"
+      ],
+      "description_short": "Aprenda a prevenir conflitos e ensinar alternativas sem punição.",
+      "description_long": "Este livro orienta o manejo de situações cotidianas de baixo risco. Agressão, medo intenso, autolesão e mudanças repentinas exigem avaliação profissional, não experimentos domésticos. Inclui 5 capítulos temáticos, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-019.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-016",
+        "book-017",
+        "book-018",
+        "book-020"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-020",
+      "volume": 20,
+      "collection_id": "collection-04",
+      "title": "Atividades e truques para ensinar ao seu pet",
+      "subtitle": "Ideias de diversão e aprendizado para cães e gatos, com segurança.",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 12,
+      "words_estimate": 1282,
+      "chapters": 5,
+      "recipe_cards": 0,
+      "benefits": [
+        "Escolha a atividade certa",
+        "Jogos de exploração",
+        "Truques simples",
+        "Desafios mentais sem frustração",
+        "Monte sua semana de diversão"
+      ],
+      "description_short": "Ideias de diversão e aprendizado para cães e gatos, com segurança.",
+      "description_long": "O valor da brincadeira não está em impressionar ninguém. É criar oportunidades para explorar, aprender e interagir, respeitando o corpo, a preferência e os limites de cada pet. Inclui 5 capítulos temáticos, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-020.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-016",
+        "book-017",
+        "book-018",
+        "book-019"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-021",
+      "volume": 21,
+      "collection_id": "collection-06",
+      "title": "O Guia Completo de Higiene para Cães",
+      "subtitle": "Cuidados cotidianos, conforto e uma rotina de higiene sem pressa.",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 10,
+      "words_estimate": 1105,
+      "chapters": 5,
+      "recipe_cards": 0,
+      "benefits": [
+        "A rotina começa pela observação",
+        "Escovação e pelagem",
+        "Banho sem excessos",
+        "Patas, unhas e orelhas",
+        "Boca, ambiente e organização"
+      ],
+      "description_short": "Cuidados cotidianos, conforto e uma rotina de higiene sem pressa.",
+      "description_long": "Uma rotina de higiene bem organizada é também uma oportunidade de conhecer o corpo do seu cão. Aprenda a observar, escolher produtos adequados e tornar os cuidados domésticos mais confortáveis. Inclui 5 capítulos temáticos, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-021.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-022",
+        "book-023",
+        "book-024",
+        "book-025"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-022",
+      "volume": 22,
+      "collection_id": "collection-06",
+      "title": "O Guia Completo de Higiene para Gatos",
+      "subtitle": "Respeite a higiene natural dos felinos e cuide sem forçar.",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 10,
+      "words_estimate": 1117,
+      "chapters": 5,
+      "recipe_cards": 0,
+      "benefits": [
+        "O que a higiene natural nos ensina",
+        "Escovar com consentimento",
+        "Caixa sanitária e ambiente limpo",
+        "Banho é uma exceção",
+        "Unhas, boca e orelhas"
+      ],
+      "description_short": "Respeite a higiene natural dos felinos e cuide sem forçar.",
+      "description_long": "Gatos possuem hábitos próprios de limpeza, mas ainda precisam de ajuda com a pelagem, a caixa sanitária, a boca e outros cuidados. Este guia ensina a observar as necessidades individuais e respeitar os limites do animal. Inclui 5 capítulos temáticos, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-022.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-021",
+        "book-023",
+        "book-024",
+        "book-025"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-023",
+      "volume": 23,
+      "collection_id": "collection-06",
+      "title": "Banho, Escovação e Cuidados com a Pelagem",
+      "subtitle": "Da escolha dos utensílios ao cuidado cotidiano, sem estresse desnecessário.",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 11,
+      "words_estimate": 1092,
+      "chapters": 5,
+      "recipe_cards": 0,
+      "benefits": [
+        "Conheça o tipo de pelagem",
+        "A escolha da escova",
+        "Organize um banho seguro",
+        "Secagem e acabamento",
+        "Nós, queda de pelo e atendimento"
+      ],
+      "description_short": "Da escolha dos utensílios ao cuidado cotidiano, sem estresse desnecessário.",
+      "description_long": "Pelos diferentes exigem abordagens diferentes. Este guia ajuda você a preparar sessões de cuidado, reconhecer limites e saber quando o auxílio profissional é a escolha mais segura. Inclui 5 capítulos temáticos, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-023.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-021",
+        "book-022",
+        "book-024",
+        "book-025"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-024",
+      "volume": 24,
+      "collection_id": "collection-06",
+      "title": "Saúde Bucal e Higiene Dental dos Pets",
+      "subtitle": "Pequenos cuidados em casa e acompanhamento profissional para cães e gatos.",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 10,
+      "words_estimate": 1092,
+      "chapters": 5,
+      "recipe_cards": 0,
+      "benefits": [
+        "Conhecendo a saúde bucal",
+        "Materiais para uma rotina segura",
+        "Adaptação à escovação",
+        "Produtos auxiliares e seus limites",
+        "O papel da consulta odontológica"
+      ],
+      "description_short": "Pequenos cuidados em casa e acompanhamento profissional para cães e gatos.",
+      "description_long": "Cuidar da boca do pet é importante mesmo quando ele continua comendo normalmente. Entenda os limites da higiene doméstica e as etapas para criar uma rotina segura. Inclui 5 capítulos temáticos, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-024.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-021",
+        "book-022",
+        "book-023",
+        "book-025"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-025",
+      "volume": 25,
+      "collection_id": "collection-06",
+      "title": "Cuidados com a Pele, Patas, Unhas e Orelhas",
+      "subtitle": "Saiba observar, proteger e reconhecer quando buscar ajuda.",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 10,
+      "words_estimate": 1127,
+      "chapters": 5,
+      "recipe_cards": 0,
+      "benefits": [
+        "A pele como parte do cuidado",
+        "Patas protegidas dentro e fora de casa",
+        "Unhas: uma tarefa que pede calma",
+        "Orelhas: observar antes de limpar",
+        "Organize os cuidados e procure ajuda"
+      ],
+      "description_short": "Saiba observar, proteger e reconhecer quando buscar ajuda.",
+      "description_long": "A atenção a pequenas mudanças do corpo pode tornar o cuidado mais organizado. Este guia ensina observações domésticas não invasivas, prevenção de acidentes e limites claros para procurar atendimento. Inclui 5 capítulos temáticos, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-025.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-021",
+        "book-022",
+        "book-023",
+        "book-024"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-026",
+      "volume": 26,
+      "collection_id": "collection-07",
+      "title": "Meu primeiro filhote de cachorro",
+      "subtitle": "Um começo tranquilo, seguro e carinhoso",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 9,
+      "words_estimate": 930,
+      "chapters": 5,
+      "recipe_cards": 0,
+      "benefits": [
+        "A chegada ao lar",
+        "A primeira consulta",
+        "Alimentação e crescimento",
+        "Banheiro e aprendizagem",
+        "Socialização com cuidado"
+      ],
+      "description_short": "Um começo tranquilo, seguro e carinhoso.",
+      "description_long": "Um filhote chega após a adoção e chora à noite. Estabeleça um espaço seguro e previsível, sem punir o medo. Nos primeiros dias, o objetivo é adaptação e avaliação veterinária, não dominar todos os comandos. Inclui 5 capítulos temáticos, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-026.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-027",
+        "book-028",
+        "book-029",
+        "book-030"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-027",
+      "volume": 27,
+      "collection_id": "collection-07",
+      "title": "Meu primeiro filhote de gato",
+      "subtitle": "Prepare o lar para um pequeno explorador",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 9,
+      "words_estimate": 921,
+      "chapters": 5,
+      "recipe_cards": 0,
+      "benefits": [
+        "O quarto de adaptação",
+        "Idade e alimentação",
+        "A caixa de areia",
+        "Brincar sem usar as mãos",
+        "Prevenção desde cedo"
+      ],
+      "description_short": "Prepare o lar para um pequeno explorador.",
+      "description_long": "Um filhote felino se esconde atrás de um móvel ao chegar. Em vez de deixá-lo explorar toda a casa de uma vez, um espaço inicial seguro permite descobrir água, alimento, caixa e refúgio sem pressão. Inclui 5 capítulos temáticos, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-027.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-026",
+        "book-028",
+        "book-029",
+        "book-030"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-028",
+      "volume": 28,
+      "collection_id": "collection-07",
+      "title": "Cuidados com pets adultos",
+      "subtitle": "Uma rotina de saúde que cabe na vida real",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 9,
+      "words_estimate": 857,
+      "chapters": 5,
+      "recipe_cards": 0,
+      "benefits": [
+        "Conheça o padrão do seu animal",
+        "Nutrição que acompanha a rotina",
+        "Prevenção e consultas",
+        "Movimento e descanso",
+        "Organização para imprevistos"
+      ],
+      "description_short": "Uma rotina de saúde que cabe na vida real.",
+      "description_long": "Dois adultos alternam os horários de trabalho e o cão recebe comida duas vezes sem que ninguém perceba. Um registro simples evita tanto duplicações como esquecimentos. O mesmo vale para medicamentos prescritos, com cuidados adicionais. Inclui 5 capítulos temáticos, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-028.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-026",
+        "book-027",
+        "book-029",
+        "book-030"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-029",
+      "volume": 29,
+      "collection_id": "collection-07",
+      "title": "Envelhecendo com qualidade: cuidados com pets idosos",
+      "subtitle": "Conforto, autonomia e atenção em cada mudança",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 9,
+      "words_estimate": 887,
+      "chapters": 5,
+      "recipe_cards": 0,
+      "benefits": [
+        "Reconhecer necessidades novas",
+        "Casa mais confortável",
+        "Peso, musculatura e apetite",
+        "Atividade sem exagero",
+        "Qualidade de vida e rede de apoio"
+      ],
+      "description_short": "Conforto, autonomia e atenção em cada mudança.",
+      "description_long": "Um cão idoso escorrega para levantar, e um gato passa a evitar o sofá. Essas mudanças podem indicar desconforto. Além de adaptar o ambiente, procure avaliação em vez de aceitar tudo como velhice. Inclui 5 capítulos temáticos, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-029.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-026",
+        "book-027",
+        "book-028",
+        "book-030"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-030",
+      "volume": 30,
+      "collection_id": "collection-07",
+      "title": "Adoção responsável e adaptação ao novo lar",
+      "subtitle": "Um encontro que transforma duas vidas",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 9,
+      "words_estimate": 885,
+      "chapters": 5,
+      "recipe_cards": 0,
+      "benefits": [
+        "Escolher com responsabilidade",
+        "Preparar a chegada",
+        "A história de saúde",
+        "Adaptação sem relógio",
+        "O compromisso continua"
+      ],
+      "description_short": "Um encontro que transforma duas vidas.",
+      "description_long": "Uma família se apaixona por um cachorro visto em uma feira. Antes da decisão, conversa sobre custos, tempo disponível, outros animais e o que já conhece do histórico. Essa preparação é uma forma de cuidado. Inclui 5 capítulos temáticos, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-030.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-026",
+        "book-027",
+        "book-028",
+        "book-029"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-031",
+      "volume": 31,
+      "collection_id": "collection-05",
+      "title": "Exercícios Físicos e Atividades para Cães",
+      "subtitle": "Movimento, passeios e diversão no ritmo do seu melhor amigo.",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 10,
+      "words_estimate": 1146,
+      "chapters": 5,
+      "recipe_cards": 0,
+      "benefits": [
+        "Conheça o ritmo do seu cão",
+        "Passeios que também enriquecem",
+        "Brincadeiras dentro de casa",
+        "Calor, piso e hidratação",
+        "Uma semana sustentável"
+      ],
+      "description_short": "Movimento, passeios e diversão no ritmo do seu melhor amigo.",
+      "description_long": "O exercício é uma oportunidade para o cão explorar, conviver e desenvolver habilidades, não uma competição. Aprenda a organizar uma rotina que respeite a idade, a saúde e os interesses do seu companheiro. Inclui 5 capítulos temáticos, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-031.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-032",
+        "book-033",
+        "book-034",
+        "book-035"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-032",
+      "volume": 32,
+      "collection_id": "collection-05",
+      "title": "Enriquecimento Ambiental para Gatos",
+      "subtitle": "Um lar que acolhe instintos, curiosidade e descanso.",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 10,
+      "words_estimate": 1099,
+      "chapters": 5,
+      "recipe_cards": 0,
+      "benefits": [
+        "Os recursos essenciais",
+        "Altura, esconderijos e escolha",
+        "Brincar como caçador",
+        "Arranhar, explorar e descansar",
+        "Rotina em casas com vários gatos"
+      ],
+      "description_short": "Um lar que acolhe instintos, curiosidade e descanso.",
+      "description_long": "Seu gato precisa de oportunidades para se esconder, arranhar, explorar e brincar. Pequenas mudanças no ambiente podem respeitar esses comportamentos sem transformar a casa em um parque de brinquedos. Inclui 5 capítulos temáticos, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-032.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-031",
+        "book-033",
+        "book-034",
+        "book-035"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-033",
+      "volume": 33,
+      "collection_id": "collection-05",
+      "title": "Brincadeiras e Jogos para Pets",
+      "subtitle": "Ideias simples para se divertir com cães e gatos, respeitando suas escolhas.",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 12,
+      "words_estimate": 1391,
+      "chapters": 5,
+      "recipe_cards": 0,
+      "benefits": [
+        "Descubra o estilo de brincadeira",
+        "Jogos de busca para cães",
+        "Jogos felinos de captura",
+        "Jogos de raciocínio e alimento",
+        "Organizar brincadeiras em família"
+      ],
+      "description_short": "Ideias simples para se divertir com cães e gatos, respeitando suas escolhas.",
+      "description_long": "Brincar vai além de gastar energia: é uma oportunidade de explorar, resolver desafios e compartilhar momentos. Este guia propõe atividades adaptáveis e um banco de ideias para usar com segurança. Inclui 5 capítulos temáticos, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-033.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-031",
+        "book-032",
+        "book-034",
+        "book-035"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-034",
+      "volume": 34,
+      "collection_id": "collection-05",
+      "title": "Brinquedos Caseiros e Criativos para Cães e Gatos",
+      "subtitle": "Enriquecimento com materiais simples, supervisão e segurança.",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 11,
+      "words_estimate": 1069,
+      "chapters": 5,
+      "recipe_cards": 0,
+      "benefits": [
+        "Segurança antes de montar",
+        "Caixa de exploração",
+        "Exploração olfativa sem improvisos frágeis",
+        "Arranhadores e lugares de observação",
+        "Rotação, limpeza e descarte"
+      ],
+      "description_short": "Enriquecimento com materiais simples, supervisão e segurança.",
+      "description_long": "Criatividade não precisa significar improvisar com objetos perigosos. Aprenda a selecionar materiais, montar atividades simples e retirar qualquer item que represente risco. Inclui 5 capítulos temáticos, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-034.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-031",
+        "book-032",
+        "book-033",
+        "book-035"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-035",
+      "volume": 35,
+      "collection_id": "collection-05",
+      "title": "Como Manter seu Pet Feliz em Apartamentos",
+      "subtitle": "Conforto, movimento e convivência em espaços menores.",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 11,
+      "words_estimate": 1081,
+      "chapters": 5,
+      "recipe_cards": 0,
+      "benefits": [
+        "O espaço que realmente importa",
+        "Janelas, varandas e portas",
+        "Atividade em uma rotina urbana",
+        "Ruídos e convivência com vizinhos",
+        "Rotina compartilhada e limpeza"
+      ],
+      "description_short": "Conforto, movimento e convivência em espaços menores.",
+      "description_long": "Um apartamento pode oferecer uma boa rotina desde que o ambiente seja seguro, os recursos estejam disponíveis e as oportunidades de movimento e descanso sejam planejadas para cada animal. Inclui 5 capítulos temáticos, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-035.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-031",
+        "book-032",
+        "book-033",
+        "book-034"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-036",
+      "volume": 36,
+      "collection_id": "collection-08",
+      "title": "Transformando sua casa em um ambiente pet friendly",
+      "subtitle": "Segurança e conforto sem depender de luxo",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 9,
+      "words_estimate": 887,
+      "chapters": 5,
+      "recipe_cards": 0,
+      "benefits": [
+        "Enxergue a casa na altura do pet",
+        "Recursos essenciais",
+        "Janelas, portas e quintais",
+        "Higiene e convivência",
+        "Enriquecimento de baixo custo"
+      ],
+      "description_short": "Segurança e conforto sem depender de luxo.",
+      "description_long": "Uma casa pode ter riscos junto ao chão, nas bancadas e perto das janelas. Uma revisão por cômodo ajuda a encontrar objetos esquecidos, produtos de limpeza, fios e plantas antes que o pet alcance. Inclui 5 capítulos temáticos, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-036.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-037",
+        "book-038",
+        "book-039",
+        "book-040"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-037",
+      "volume": 37,
+      "collection_id": "collection-08",
+      "title": "Crianças e pets: uma convivência saudável",
+      "subtitle": "Respeito, supervisão e aprendizagem em família",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 9,
+      "words_estimate": 907,
+      "chapters": 5,
+      "recipe_cards": 0,
+      "benefits": [
+        "Adultos são responsáveis",
+        "Aprender a pedir licença",
+        "Brincadeiras apropriadas",
+        "Higiene e prevenção",
+        "Preparar mudanças na família"
+      ],
+      "description_short": "Respeito, supervisão e aprendizagem em família.",
+      "description_long": "Uma criança quer brincar enquanto o cão come. O adulto pode explicar que esse é o momento de deixá-lo tranquilo e propor outra atividade. Supervisão ativa significa acompanhar, antecipar riscos e intervir antes de um conflito. Inclui 5 capítulos temáticos, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-037.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-036",
+        "book-038",
+        "book-039",
+        "book-040"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-038",
+      "volume": 38,
+      "collection_id": "collection-08",
+      "title": "Como fazer cães e gatos conviverem em harmonia",
+      "subtitle": "Apresentações graduais e espaços seguros",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 9,
+      "words_estimate": 897,
+      "chapters": 5,
+      "recipe_cards": 0,
+      "benefits": [
+        "Compatibilidade não é garantida",
+        "Primeiro contato pelo ambiente",
+        "Barreira e distância",
+        "Uma casa com recursos separados",
+        "Medir progresso e pedir ajuda"
+      ],
+      "description_short": "Apresentações graduais e espaços seguros.",
+      "description_long": "Um gato residente ouve um novo cachorro do outro lado da porta. O primeiro objetivo não é que se tornem amigos, mas que se sintam seguros. A convivência deve avançar de acordo com a resposta dos dois. Inclui 5 capítulos temáticos, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-038.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-036",
+        "book-037",
+        "book-039",
+        "book-040"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-039",
+      "volume": 39,
+      "collection_id": "collection-08",
+      "title": "Viajando com seu pet",
+      "subtitle": "Planejamento para deslocamentos com segurança",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 9,
+      "words_estimate": 908,
+      "chapters": 5,
+      "recipe_cards": 0,
+      "benefits": [
+        "Decidir se vale a pena levar",
+        "Documentação no Brasil e exterior",
+        "Acostumar ao transporte",
+        "Mala essencial",
+        "Chegar e voltar"
+      ],
+      "description_short": "Planejamento para deslocamentos com segurança.",
+      "description_long": "Um casal decide visitar parentes com o cachorro e considera levar também o gato. Antes de reservar transporte, avalia conforto, saúde, documentação e alternativa de cuidador em casa. O melhor plano nem sempre inclui levar os dois animais. Inclui 5 capítulos temáticos, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-039.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-036",
+        "book-037",
+        "book-038",
+        "book-040"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-040",
+      "volume": 40,
+      "collection_id": "collection-08",
+      "title": "Como cuidar de pets em uma rotina corrida",
+      "subtitle": "Pequenas ações que sustentam grandes cuidados",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 9,
+      "words_estimate": 876,
+      "chapters": 5,
+      "recipe_cards": 0,
+      "benefits": [
+        "O mínimo que não pode faltar",
+        "Criar rotinas com sinais",
+        "Tempo de qualidade",
+        "Delegar sem perder controle",
+        "Preparar semanas difíceis"
+      ],
+      "description_short": "Pequenas ações que sustentam grandes cuidados.",
+      "description_long": "Um tutor sai cedo e volta à noite. Um familiar ajuda durante a tarde, mas ninguém sabe qual tarefa já foi concluída. Uma divisão escrita reduz esquecimentos e permite atividades de qualidade sem prometer tempo que não existe. Inclui 5 capítulos temáticos, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-040.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-036",
+        "book-037",
+        "book-038",
+        "book-039"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-041",
+      "volume": 41,
+      "collection_id": "collection-02",
+      "title": "Biscoitos naturais para cães",
+      "subtitle": "Pequenas recompensas, grandes momentos de carinho",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 30,
+      "words_estimate": 3482,
+      "chapters": 5,
+      "recipe_cards": 20,
+      "benefits": [
+        "Recompensar sem exagerar",
+        "Sua bancada, do início ao fim",
+        "Massa, espessura e ponto",
+        "Um pote bem organizado",
+        "Recompensas nos treinos"
+      ],
+      "description_short": "Pequenas recompensas, grandes momentos de carinho.",
+      "description_long": "Aprenda a organizar uma tarde de forno e a transformar ingredientes simples em pequenas recompensas para um cão adulto saudável. Inclui 5 capítulos temáticos, 20 fichas culinárias de estudo, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-041.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-042",
+        "book-043",
+        "book-044",
+        "book-045"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-042",
+      "volume": 42,
+      "collection_id": "collection-02",
+      "title": "Petiscos naturais para gatos",
+      "subtitle": "Texturas delicadas e pequenos momentos de afeto",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 21,
+      "words_estimate": 2463,
+      "chapters": 5,
+      "recipe_cards": 20,
+      "benefits": [
+        "O jeito felino de comer",
+        "A textura faz diferença",
+        "Proteínas e preparo",
+        "Petisco dentro da rotina",
+        "Quando dizer não ao petisco"
+      ],
+      "description_short": "Texturas delicadas e pequenos momentos de afeto.",
+      "description_long": "Descubra maneiras de variar textura e apresentação sem comprometer o alimento completo do seu gato. Inclui 5 capítulos temáticos, 20 fichas culinárias de estudo, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-042.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-041",
+        "book-043",
+        "book-044",
+        "book-045"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-043",
+      "volume": 43,
+      "collection_id": "collection-02",
+      "title": "Receitas refrescantes para pets",
+      "subtitle": "Dias quentes, água fresca e cuidados com carinho",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 16,
+      "words_estimate": 1790,
+      "chapters": 5,
+      "recipe_cards": 12,
+      "benefits": [
+        "Água vem primeiro",
+        "Fresco não precisa ser congelado",
+        "Passeios e calor",
+        "Cozinha segura no verão",
+        "Reconheça uma emergência"
+      ],
+      "description_short": "Dias quentes, água fresca e cuidados com carinho.",
+      "description_long": "Organize uma rotina de verão e explore pequenas preparações frescas, sem oferecer gelo duro nem confundir petiscos com hidratação. Inclui 5 capítulos temáticos, 12 fichas culinárias de estudo, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-043.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-041",
+        "book-042",
+        "book-044",
+        "book-045"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-044",
+      "volume": 44,
+      "collection_id": "collection-02",
+      "title": "Receitas para aniversários e ocasiões especiais",
+      "subtitle": "Celebre com afeto, sem perder os cuidados",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 19,
+      "words_estimate": 1957,
+      "chapters": 5,
+      "recipe_cards": 12,
+      "benefits": [
+        "Uma festa feita para o animal",
+        "Mesa bonita, ingredientes simples",
+        "Porções pequenas e compartilhamento",
+        "Decorações sem perigo",
+        "Memórias que não dependem da comida"
+      ],
+      "description_short": "Celebre com afeto, sem perder os cuidados.",
+      "description_long": "Planeje aniversários, dias de adoção e datas especiais com preparações pequenas, ambiente tranquilo e escolhas adequadas a cada espécie. Inclui 5 capítulos temáticos, 12 fichas culinárias de estudo, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-044.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-041",
+        "book-042",
+        "book-043",
+        "book-045"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-045",
+      "volume": 45,
+      "collection_id": "collection-02",
+      "title": "Alimentação complementar, alergias e sensibilidades",
+      "subtitle": "Observe, registre e converse com o médico-veterinário",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 13,
+      "words_estimate": 1243,
+      "chapters": 10,
+      "recipe_cards": 0,
+      "benefits": [
+        "O que significa uma reação alimentar?",
+        "Sinais que merecem atenção",
+        "O mapa alimentar",
+        "Por que a espécie importa",
+        "Dieta de eliminação: o que esperar"
+      ],
+      "description_short": "Observe, registre e converse com o médico-veterinário.",
+      "description_long": "Aprenda a organizar informações sobre a alimentação e reconhecer quando é necessário buscar avaliação profissional, sem tentar diagnosticar ou tratar alergias em casa. Inclui 10 capítulos temáticos, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-045.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-041",
+        "book-042",
+        "book-043",
+        "book-044"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-046",
+      "volume": 46,
+      "collection_id": "collection-10",
+      "title": "Guia essencial dos cães",
+      "subtitle": "Um ponto de partida para conhecer seu companheiro",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 9,
+      "words_estimate": 865,
+      "chapters": 5,
+      "recipe_cards": 0,
+      "benefits": [
+        "Diversidade canina",
+        "Comunicação e aprendizado",
+        "Alimentação e cuidados básicos",
+        "Ambiente, passeio e segurança",
+        "Fases da vida e compromisso"
+      ],
+      "description_short": "Um ponto de partida para conhecer seu companheiro.",
+      "description_long": "Duas famílias adotam cães do mesmo abrigo: um gosta de caminhar, outro prefere explorar devagar. O perfil individual ajuda a escolher passeios, ensino e cuidados sem esperar que todos tenham o mesmo comportamento. Inclui 5 capítulos temáticos, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-046.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-047",
+        "book-048",
+        "book-049",
+        "book-050"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-047",
+      "volume": 47,
+      "collection_id": "collection-10",
+      "title": "Guia essencial dos gatos",
+      "subtitle": "Descubra as necessidades de cada felino",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 9,
+      "words_estimate": 864,
+      "chapters": 5,
+      "recipe_cards": 0,
+      "benefits": [
+        "Cada gato tem uma história",
+        "Território e recursos",
+        "Brincar é oportunidade de explorar",
+        "Nutrição e higiene",
+        "Vida protegida e saudável"
+      ],
+      "description_short": "Descubra as necessidades de cada felino.",
+      "description_long": "Uma família adota um segundo gato e decide colocar todos os recursos juntos. Embora economize espaço, isso pode favorecer bloqueio de passagem e disputa. Espalhar recursos permite maior liberdade. Inclui 5 capítulos temáticos, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-047.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-046",
+        "book-048",
+        "book-049",
+        "book-050"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-048",
+      "volume": 48,
+      "collection_id": "collection-10",
+      "title": "Um ano de cuidados com seu pet",
+      "subtitle": "Planeje os 365 dias com flexibilidade e atenção",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 21,
+      "words_estimate": 1315,
+      "chapters": 5,
+      "recipe_cards": 0,
+      "benefits": [
+        "O que fazer diariamente",
+        "Semanas organizadas",
+        "Meses e estações",
+        "Um calendário útil de saúde",
+        "Revisão anual e continuidade"
+      ],
+      "description_short": "Planeje os 365 dias com flexibilidade e atenção.",
+      "description_long": "Em uma semana corrida, várias anotações ficam em branco. O objetivo do calendário não é compensar tudo no dia seguinte; é tornar a rotina identificável e evitar esquecimentos de necessidades essenciais. Inclui 5 capítulos temáticos, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-048.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-046",
+        "book-047",
+        "book-049",
+        "book-050"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-049",
+      "volume": 49,
+      "collection_id": "collection-10",
+      "title": "Manual financeiro do tutor de pets",
+      "subtitle": "Planejamento em reais, sem abrir mão dos cuidados essenciais",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 9,
+      "words_estimate": 900,
+      "chapters": 5,
+      "recipe_cards": 0,
+      "benefits": [
+        "Diferencie gastos essenciais",
+        "Monte um orçamento em reais",
+        "Reserva para imprevistos",
+        "Comprar melhor",
+        "Revisão sem culpa"
+      ],
+      "description_short": "Planejamento em reais, sem abrir mão dos cuidados essenciais.",
+      "description_long": "Uma família gasta R$ 120 com alimentação, R$ 40 com higiene e R$ 30 em brinquedos num mês hipotético. São R$ 190 nesses itens, mas faltam possíveis consultas, transporte, prevenção e reserva. O objetivo é visualizar a realidade sem julgar o tutor. Inclui 5 capítulos temáticos, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-049.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-046",
+        "book-047",
+        "book-048",
+        "book-050"
+      ],
+      "bonus_pages": 1
+    },
+    {
+      "id": "book-050",
+      "volume": 50,
+      "collection_id": "collection-10",
+      "title": "O guia do tutor extraordinário",
+      "subtitle": "Responsabilidade, cuidado e vínculo para a vida toda",
+      "version": "4.0.0-rc1",
+      "language": "pt-BR",
+      "status": "aguardando_validacao_profissional",
+      "publishable": false,
+      "price_brl": null,
+      "pages": 9,
+      "words_estimate": 888,
+      "chapters": 5,
+      "recipe_cards": 0,
+      "benefits": [
+        "Responsabilidade antes da aparência",
+        "Convivência com respeito",
+        "Prevenção e segurança",
+        "Cidadania e comunidade",
+        "Aprender ao longo da vida"
+      ],
+      "description_short": "Responsabilidade, cuidado e vínculo para a vida toda.",
+      "description_long": "Uma família decide escolher uma melhoria simples: proteger a janela, reorganizar o pote de água ou reservar tempo para brincar. Não precisa montar uma rotina perfeita em um dia; precisa priorizar segurança e necessidades reais. Inclui 5 capítulos temáticos, situação ilustrativa, orientações aplicáveis e ficha de acompanhamento.",
+      "cover": "book-050.webp",
+      "cover_revised": "capa.jpg",
+      "preview": "demonstracao.pdf",
+      "files": [
+        "ebook.pdf",
+        "ebook.epub",
+        "ebook.html",
+        "ebook.md"
+      ],
+      "bonus": [
+        "bonus/ficha-pratica.pdf"
+      ],
+      "related": [
+        "book-046",
+        "book-047",
+        "book-048",
+        "book-049"
+      ],
+      "bonus_pages": 1
+    }
+  ]
+}

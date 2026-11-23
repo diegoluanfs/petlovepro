@@ -1,14 +1,47 @@
-const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm'),path=require('node:path'),crypto=require('node:crypto');
-const logic=require('../functions/logic.cjs');
-const secret='synthetic-secret-only-for-test';
-const product={catalogId:'001',title:'Livro exemplo',enabled:true,checkoutEnabled:true,price:2490,checkout:'https://pay.kiwify.com.br/AbC123'};
-const sample={order_id:'order-1',webhook_event_type:'order_approved',order_status:'paid',Product:{product_id:'product-1'},Customer:{email:' buyer@example.com ',CPF:'do not persist',mobile:'do not persist'},Commissions:{charge_amount:2490,currency:'BRL'},card_last4digits:'do not persist'};
-function setup(){const docs=new Map([['kiwifyProducts/product-1',product]]);let fail=false;const snapshot=ref=>({exists:docs.has(ref.key),data:()=>docs.get(ref.key)});const db={collection(name){return{doc(id){return{id,key:`${name}/${id}`}},where(field,op,value){return{async get(){return{docs:[...docs.entries()].filter(([k,v])=>k.startsWith(name+'/')&&v[field]===value).map(([k,v])=>({id:k.split('/')[1],data:()=>v}))}}}}}},async runTransaction(fn){if(fail)throw Error('simulated transaction error');const ops=[];const result=await fn({get:async ref=>snapshot(ref),set(ref,data,{merge}={}){ops.push(()=>docs.set(ref.key,{...(merge?docs.get(ref.key):{}),...data}))},create(ref,data){ops.push(()=>{if(docs.has(ref.key))throw Error('duplicate');docs.set(ref.key,data)})}});ops.forEach(op=>op());return result}};const modules={'firebase-admin/app':{initializeApp(){}},'firebase-admin/auth':{getAuth:()=>({getUser:async uid=>({email:uid==='buyer'?'BUYER@example.com':'other@example.com',emailVerified:true,providerData:[]})})},'firebase-admin/firestore':{getFirestore:()=>db,FieldValue:{serverTimestamp:()=>({toDate:()=>new Date('2026-01-01')})}},'firebase-functions/v2/https':{onCall:(o,fn)=>fn,onRequest:(o,fn)=>fn,HttpsError:Error},'firebase-functions/params':{defineSecret:()=>({value:()=>secret})},'firebase-functions/v1':{region:()=>({auth:{user:()=>({onCreate:fn=>fn})}})},'./logic.cjs':logic};const exports={};vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../functions/index.cjs'),'utf8'),{require:n=>modules[n],exports,console:{error(){}},Buffer});async function send(body=sample,options={}){const raw=options.raw||Buffer.from(JSON.stringify(body));const query={signature:crypto.createHmac('sha1',secret).update(raw).digest('hex'),...options.query};const req={method:'POST',is:()=>true,rawBody:raw,query,...options.req};const res={code:0,text:'',status(n){this.code=n;return this},send(s){this.text=s;return this}};await exports.kiwifyWebhook(req,res);return res}return {docs,send,profile:exports.syncProfile,fail:()=>fail=true};}
-const orderKey='orders/'+logic.hash('order-1');
-test('webhook rejects invalid signature, content, method and malformed JSON before writes',async()=>{const s=setup();assert.equal((await s.send(sample,{query:{signature:'bad'}})).code,401);assert.equal((await s.send(sample,{req:{method:'GET'}})).code,405);assert.equal((await s.send(sample,{req:{is:()=>false}})).code,415);assert.equal((await s.send(sample,{raw:Buffer.from('{')})).code,400);assert.equal((await s.send(sample,{raw:Buffer.alloc(512001)})).code,413);assert.equal(s.docs.size,1)});
-test('webhook persists mapped paid purchase once and minimizes stored buyer information',async()=>{const s=setup();assert.equal((await s.send()).code,200);assert.equal(s.docs.get(orderKey).status,'approved');assert.equal(s.docs.get(orderKey).buyerEmail,'buyer@example.com');assert.equal(s.docs.get(orderKey).amountMinor,2490);assert(!JSON.stringify(s.docs.get(orderKey)).includes('do not persist'));assert.equal((await s.send()).text,'Already processed');assert.equal([...s.docs.keys()].filter(k=>k.startsWith('webhookEvents/')).length,1)});
-test('webhook refuses unknown mappings and inconsistent paid event, ignores unsupported event',async()=>{const s=setup();assert.equal((await s.send({...sample,Product:{product_id:'unknown'}})).code,422);assert.equal((await s.send({...sample,order_status:'waiting_payment'})).code,400);assert.equal((await s.send({...sample,webhook_event_type:'pix_created'})).text,'Ignored event');assert.equal(s.docs.size,1)});
-test('refund and chargeback persist even after mapping deletion; replay does not restore approved state',async()=>{const s=setup();await s.send();s.docs.delete('kiwifyProducts/product-1');assert.equal((await s.send({...sample,webhook_event_type:'order_refunded',order_status:'refunded'})).code,200);assert.equal(s.docs.get(orderKey).status,'refunded');await s.send();assert.equal(s.docs.get(orderKey).status,'refunded');await s.send({...sample,webhook_event_type:'chargeback',order_status:'chargedback'});assert.equal(s.docs.get(orderKey).status,'chargeback');await s.send({...sample,webhook_event_type:'order_refunded',order_status:'refunded'});assert.equal(s.docs.get(orderKey).status,'chargeback')});
-test('refund before approval remains terminal and conflicting ownership is rejected',async()=>{const s=setup();await s.send({...sample,webhook_event_type:'order_refunded',order_status:'refunded'});await s.send();assert.equal(s.docs.get(orderKey).status,'refunded');assert.equal((await s.send({...sample,Customer:{email:'other@example.com'}})).code,409);assert.equal(s.docs.get(orderKey).buyerEmail,'buyer@example.com')});
-test('transaction failure returns retryable error',async()=>{const s=setup();s.fail();assert.equal((await s.send()).code,500);assert.equal(s.docs.size,1)});
-test('profile returns purchase only to verified matching email and not to another user',async()=>{const s=setup();await s.send();const owner=await s.profile({auth:{uid:'buyer'},data:{}});assert.equal(owner.orders.length,1);assert.equal(owner.orders[0].productId,'001');assert.equal(owner.orders[0].status,'approved');assert(!Object.hasOwn(owner.orders[0],'buyerEmail'));const other=await s.profile({auth:{uid:'other'},data:{}});assert.equal(other.orders.length,0)});
+const test=require('node:test');const assert=require('node:assert/strict');
+const {reconcileVerifiedEvent,mergeOrder,normalizeVerifiedEvent,analyticsPurchase}=require('../src/commerce-core.cjs');
+const product={id:'book-001',title:'Receitas Naturais Saudáveis para Pets',currency:'BRL',kiwifyProductId:'6fc77560-e344-11f1-adb8-1969287addfd'};
+const base={orderId:'order-100',kiwifyProductId:product.kiwifyProductId,customerEmail:'Buyer@example.com',amountCents:2490,currency:'BRL'};
+function fake(){const orders=new Map(),events=new Set(),outbox=new Map();return {
+ orders,events,outbox,adapter:{getProductByKiwifyId:async id=>id===product.kiwifyProductId?product:null,
+ resolveVerifiedUID:async email=>email==='buyer@example.com'?'uid-001':null,
+ atomicSave:async event=>{if(events.has(event.eventId))return {duplicate:true};
+   const old=orders.get(event.orderId);const merged=mergeOrder(old,event);
+   events.add(event.eventId);orders.set(event.orderId,merged.updated);
+   if(merged.emitPurchase&&!outbox.has(event.orderId))outbox.set(event.orderId,analyticsPurchase(merged.updated));
+   return {duplicate:false,status:merged.updated.status};}}};}
+test('Pix pendente -> aprovado -> reembolso, com histórico único',async()=>{
+ const db=fake();
+ await reconcileVerifiedEvent({...base,status:'pix_pending',eventId:'e1'},db.adapter);
+ assert.equal(db.orders.size,1);assert.equal(db.orders.get(base.orderId).status,'pending');
+ assert.equal(db.outbox.size,0);
+ await reconcileVerifiedEvent({...base,status:'paid',eventId:'e2'},db.adapter);
+ assert.equal(db.orders.get(base.orderId).status,'approved');assert.equal(db.outbox.size,1);
+ await reconcileVerifiedEvent({...base,status:'refunded',eventId:'e3'},db.adapter);
+ assert.equal(db.orders.get(base.orderId).status,'refunded');assert.equal(db.orders.size,1);
+ assert.equal(db.outbox.size,1);
+});
+test('mesma notificação repetida não duplica evento, pedido ou purchase',async()=>{
+ const db=fake(),e={...base,status:'paid',eventId:'repeat-id'};
+ await reconcileVerifiedEvent(e,db.adapter);
+ const result=await reconcileVerifiedEvent(e,db.adapter);
+ assert.equal(result.duplicate,true);assert.equal(db.orders.size,1);
+ assert.equal(db.outbox.size,1);assert.equal(db.events.size,1);
+});
+test('um Pix antigo não reverte reembolso ou aprovação',async()=>{
+ const db=fake();await reconcileVerifiedEvent({...base,status:'paid',eventId:'yes'},db.adapter);
+ await reconcileVerifiedEvent({...base,status:'refunded',eventId:'refund'},db.adapter);
+ await reconcileVerifiedEvent({...base,status:'pix_pending',eventId:'late'},db.adapter);
+ assert.equal(db.orders.get(base.orderId).status,'refunded');
+});
+test('rejeita payload sem identificador real e alterações de titularidade',async()=>{
+ assert.throws(()=>normalizeVerifiedEvent({...base,orderId:'',status:'paid'}));
+ const db=fake();await reconcileVerifiedEvent({...base,status:'paid',eventId:'first'},db.adapter);
+ await assert.rejects(reconcileVerifiedEvent({...base,customerEmail:'someone-else@ex.com',status:'refunded',eventId:'second'},db.adapter),/outro comprador/);
+});
+test('GA4 purchase contém transaction_id, BRL, item, valor uma vez',async()=>{
+ const db=fake();await reconcileVerifiedEvent({...base,status:'paid',eventId:'ga'},db.adapter);
+ const x=db.outbox.get(base.orderId);assert.equal(x.name,'purchase');
+ assert.equal(x.params.transaction_id,'order-100');assert.equal(x.params.currency,'BRL');
+ assert.equal(x.params.value,24.90);assert.equal(x.params.items[0].item_id,'book-001');
+});

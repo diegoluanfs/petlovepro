@@ -1,8 +1,7 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    // Profiles, purchase records and marketing preferences are served through authenticated callables.
-    // Client cannot write order status, verification status, or any other internal documents.
+    // Dados comerciais e pedidos somente via Firebase Functions / Admin SDK.
     match /{document=**} { allow read, write: if false; }
   }
 }

@@ -1,15 +1,27 @@
 {
   "name": "petlovepro",
-  "version": "0.4.4",
+  "version": "1.2.0",
   "private": true,
-  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
-    "test": "node --test test/*.test.cjs",
-    "dev": "node scripts/check-public.cjs && python -m http.server 5173 --directory public",
-    "covers": "python scripts/generate-covers.py",
-    "check:public": "node scripts/check-public.cjs",
-    "check:release": "node scripts/check-public.cjs --require-covers",
-    "commerce:template": "node scripts/kiwify-plan.cjs --init",
-    "commerce:catalog": "node scripts/kiwify-plan.cjs"
+    "dev": "node tools/server.cjs",
+    "preview": "node tools/server.cjs --dist",
+    "catalog:build": "node scripts/build-catalog.cjs",
+    "catalog:audit": "node scripts/audit-catalog.cjs",
+    "firestore:dry-run": "node scripts/prepare-firestore.cjs",
+    "build": "node scripts/build-site.cjs",
+    "test": "node --test test/*.test.cjs && node scripts/build-site.cjs && node --test tests/*.test.cjs",
+    "verify": "npm run build && npm run offers:audit && npm test && npm run firestore:dry-run && npm run inspect:deploy",
+    "release:check": "node scripts/release-gate.cjs",
+    "inspect:deploy": "node scripts/inspect-deploy.cjs",
+    "start": "npm run dev",
+    "functions:install": "npm --prefix functions-petlovepro install",
+    "deploy:preview": "npm run verify && npm run release:check && firebase hosting:channel:deploy homologacao-petlovepro --config firebase.petlovepro.json --project petlovepro-ae222",
+    "deploy:hosting": "npm run verify && npm run release:check && firebase deploy --only hosting --config firebase.petlovepro.json --project petlovepro-ae222",
+    "offers:sync": "node scripts/update-offers-snapshot.cjs",
+    "offers:audit": "node scripts/audit-catalog.cjs",
+    "pretest": "node scripts/build-site.cjs"
   }
 }

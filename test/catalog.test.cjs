@@ -1,7 +1,62 @@
-const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),os=require('node:os'),path=require('node:path');
-const {inspect,covers}=require('../scripts/check-public.cjs');
-const plan=require('../scripts/cover-plan.json');
-test('50 unique books, 10 collections of 5 and 73 matching promotional images, no paths to PDFs',async()=>{const {books,collections,allProducts,canBuy}=await import('../public/catalog.js');assert.equal(books.length,50);assert.equal(collections.length,10);assert.equal(new Set(allProducts.map(x=>x.id)).size,60);assert.equal(collections[0].id,'nutricao-natural');for(const c of collections){assert.equal(books.filter(b=>b.collectionId===c.id).length,5);assert.equal(c.topics.length,5)}assert.deepEqual(new Set([...allProducts.map(p=>'assets/covers/'+p.cover),...collections.map(p=>'assets/covers/'+p.presentation),...['dupla','gato','cozinha'].map(n=>'assets/covers/visual-'+n+'.webp')]),covers);assert.equal(plan.length,73);assert.equal(new Set(plan.map(p=>p.source)).size,73);assert(allProducts.every(p=>(!p.live||canBuy(p))&&!Object.hasOwn(p,'checkout')&&!JSON.stringify(p).includes('.pdf')));});
-test('security gate blocks PDFs, arbitrary directories and PDFs renamed to WebP',()=>{const dir=fs.mkdtempSync(path.join(os.tmpdir(),'petlovepro-public-'));try{fs.cpSync(path.join(__dirname,'../public'),dir,{recursive:true});assert.deepEqual(inspect(dir),[]);fs.writeFileSync(path.join(dir,'full.pdf'),'%PDF-1.7');fs.mkdirSync(path.join(dir,'private'));fs.mkdirSync(path.join(dir,'assets/covers'),{recursive:true});fs.writeFileSync(path.join(dir,'assets/covers/book-001.webp'),'%PDF-1.7');const errs=inspect(dir);assert(errs.some(s=>s.includes('full.pdf')));assert(errs.some(s=>s.includes('private')));assert(errs.some(s=>s.includes('PDF disfarçado')));fs.rmSync(path.join(dir,'assets/covers/collection-10.webp'),{force:true});assert(inspect(dir,{requireCovers:true}).some(s=>s.includes('collection-10.webp')));}finally{fs.rmSync(dir,{recursive:true,force:true})}});
-
-test('asset plan uses only specifically named images from new archive, never books',()=>{assert.equal(plan.filter(p=>p.kind==='cover').length,60);assert.equal(plan.filter(p=>p.kind==='presentation').length,10);assert.equal(plan.filter(p=>p.kind==='photo').length,3);assert(plan.every(p=>/\.(webp|jpg)$/.test(p.source)&&!p.source.includes('ebook')&&!p.source.includes('bonus')));});
+const test=require('node:test');const assert=require('node:assert/strict');const path=require('node:path');
+const {readJSON,readKiwifyTSV,compile,validCheckout,auditPrivateRecords}=require('../src/catalog-core.cjs');
+const root=path.resolve(__dirname,'..');
+const editorial=readJSON(path.join(root,'data/editorial-catalog.json'));
+const commercial=readKiwifyTSV(path.join(root,'data/kiwify-products-verified.tsv'));
+const release=readJSON(path.join(root,'data/release-policy.json'));
+test('catálogo de 60 itens, 50 livros e 10 coleções com cinco livros distintos',()=>{
+ const r=compile(editorial,commercial,release);assert.deepEqual(r.issues,[]);
+ assert.equal(r.products.filter(x=>x.kind==='book').length,50);
+ assert.equal(r.products.filter(x=>x.kind==='collection').length,10);
+ assert.ok(r.products.filter(x=>x.kind==='collection').every(c=>new Set(c.volumeIds).size===5));
+ assert.deepEqual(auditPrivateRecords(r.products),[]);
+});
+test('Todos os 60 produtos estão liberados com preços e links oficiais da Kiwify',()=>{
+ const r=compile(editorial,commercial,release);
+ assert.equal(r.products.length,60);
+ assert.equal(r.products.filter(p=>p.live).length,60);
+ const book1=r.products.find(p=>p.id==='book-001');
+ assert.equal(book1.checkout,'https://pay.kiwify.com.br/gqYNAHL');
+ assert.equal(book1.kiwifyProductId,'6fc77560-e344-11f1-adb8-1969287addfd');
+ assert.equal(book1.kiwifyOfferId,'571fe8f9-cbfc-4d16-af5b-d29f39014d1a');
+ for(const p of r.products){
+  assert.equal(p.price,p.kind==='book'?2490:7990);
+  assert.ok(p.kiwifyProductId);
+  assert.ok(p.kiwifyOfferId);
+  assert.ok(validCheckout(p.checkout));
+ }
+});
+const {auditOfficialOffers}=require('../src/kiwify-link-audit.cjs');
+const snapshot=readJSON(path.join(root,'data/kiwify-offers-verified.private.json'));
+test('Os 60 checkout URLs e IDs de ofertas são únicos e correspondem ao snapshot confirmado',()=>{
+ const {products}=compile(editorial,commercial,release);
+ assert.deepEqual(auditOfficialOffers(products,release,snapshot),[]);
+ assert.equal(new Set(products.map(p=>p.checkout)).size,60);
+});
+test('Auditoria bloqueia troca de destino de um livro para outro',()=>{
+ const {products}=compile(editorial,commercial,release);
+ const changed=products.map(x=>({...x}));
+ changed[2].checkout=changed[1].checkout;
+ assert.ok(auditOfficialOffers(changed,release,snapshot).some(x=>x.includes('checkout não corresponde')));
+});
+test('não permite URL externa/HTTP maliciosa',()=>{
+ assert.equal(validCheckout('http://pay.kiwify.com.br/gqYNAHL'),false);
+ assert.equal(validCheckout('https://pay.kiwify.com.br.evil.com/gqYNAHL'),false);
+ assert.equal(validCheckout('https://pay.kiwify.com.br/gqYNAHL'),true);
+});
+test('bloqueia preços divergentes em item liberado',()=>{
+ const manipulated=commercial.map(x=>({...x}));
+ manipulated.find(x=>x.title==='Receitas Naturais Saudáveis para Pets').priceCents=2990;
+ const r=compile(editorial,manipulated,release);
+ assert.ok(r.issues.some(x=>x.includes('Receitas naturais saudáveis para pets: preço Kiwify')));
+ assert.equal(r.products.find(x=>x.id==='book-001').live,false);
+});
+test('auditoria detecta regressão de item lançado para em breve',()=>{
+ const now=compile(editorial,commercial,{...release,releaseOnly:[],productCheckoutUrls:{}} ,[{id:'book-001',title:'Livro 001',live:true}]);
+ assert.ok(now.issues.some(x=>x.includes('REGRESSÃO')));
+});
+test('identifica coleções adulteradas',()=>{
+ const modified=structuredClone(editorial);
+ modified.collections[0].volumes=['book-001','book-002','book-002','book-004','book-005'];
+ assert.ok(compile(modified,commercial,release).issues.some(x=>x.includes('cinco livros distintos')));
+});

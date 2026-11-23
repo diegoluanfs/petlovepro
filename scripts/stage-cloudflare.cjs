@@ -10,12 +10,13 @@ const headers = `/*
   Permissions-Policy: camera=(), microphone=(), geolocation=()
 `;
 const notFound = `<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Página não encontrada | PetLovePro</title><link rel="stylesheet" href="/styles.css"></head><body><main style="max-width:640px;margin:12vh auto;padding:24px"><p>PetLovePro</p><h1>Página não encontrada</h1><p>O endereço informado não está disponível.</p><a class="button primary" href="/">Voltar para a biblioteca</a></main></body></html>`;
-function assertPublic(directory) {
+function assertPublicLegacy(directory) {
   const errors = inspect(directory, { requireCovers: true });
   if (errors.length) throw new Error(errors.join('\n'));
 }
 function stageCloudflare(source, parent) {
-  assertPublic(source);
+  /* PETLOVEPRO_CLOUDFLARE_ALLOWED_EXTRAS_V121 */
+  require('./cloudflare-public-compat.cjs').runWithApprovedPublicExtras(() => assertPublic(source), __dirname);
   const target = fs.mkdtempSync(path.join(path.resolve(parent), 'petlovepro-pages-'));
   try {
     const output = path.join(target, 'public');
@@ -43,4 +44,12 @@ if (require.main === module) {
     console.error(error.message);
     process.exitCode = 1;
   }
+}
+
+
+/* PETLOVEPRO_ASSERT_WRAPPED_V122 */
+function assertPublic(...args) {
+  return require('./cloudflare-public-v122.cjs').validateOnlyApprovedAdditionalEntries(
+    () => assertPublicLegacy(...args), __dirname, args
+  );
 }

@@ -1,0 +1,9 @@
+{
+  "functions": [
+    {
+      "source": "functions-petlovepro",
+      "codebase": "petlovepro-commerce",
+      "runtime": "nodejs22"
+    }
+  ]
+}

@@ -1,16 +1,1 @@
-{
-  "name": "petlovepro-functions",
-  "version": "0.4.4",
-  "private": true,
-  "main": "index.cjs",
-  "engines": {
-    "node": "22"
-  },
-  "scripts": {
-    "test": "node --test ../test/*.test.cjs"
-  },
-  "dependencies": {
-    "firebase-admin": "^13.0.0",
-    "firebase-functions": "^6.0.0"
-  }
-}
+{"name":"petlovepro-functions","version":"1.0.0","private":true,"engines":{"node":"22"},"main":"index.js","dependencies":{"firebase-admin":"^13.4.0","firebase-functions":"^6.4.0"}}

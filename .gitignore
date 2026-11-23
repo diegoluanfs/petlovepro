@@ -1,39 +1,54 @@
 node_modules/
+functions/node_modules/
+.env
+.env.*
+*.log
 .firebase/
-.firebaserc
-firebase-debug.log*
-firestore-debug.log*
-ui-debug.log*
-.env*
-!.env.example
-*.local
-service-account*.json
-campaign-export*.csv
+serviceAccount*.json
+private-delivery/
+dist/firestore-commerce-plan.private.json
+.DS_Store
 
-# Arquivos editoriais privados (não versionar)
-/coleções/
-/colecoes/
-/private/
-**/*.pdf
-**/*.epub
-.venv/
-__pycache__/
+# Dependencias
+node_modules/
+**/node_modules/
 
-# Additional private publication formats and credentials
-**/ebook.html
-**/ebook.md
-**/demonstracao.pdf
-**/colecao-completa.pdf
-**/bonus/
-**/controle-editorial/
-**/*.zip
-**/*.pem
-**/*.key
-.secret*
-*firebase-adminsdk*.json
-
-# Local commercial configuration
-*.local.json
-
-# Cloudflare Wrangler
+# Builds e caches
+site-dist/
+dist/
 .wrangler/
+.firebase/
+**/__pycache__/
+*.pyc
+*.log
+
+# Backups e temporarios
+.petlovepro-backups/
+*.bak
+*.local.json
+.gitignore.sugestao.txt
+
+# Conteudos pagos: nunca publicar no repositorio
+/colecoes/
+/coleções/
+/private/
+/private-delivery/
+
+# Dados comerciais internos
+/data/kiwify-offers-verified.private.json
+/data/kiwify-links-verified.txt
+/data/kiwify-products-verified.tsv
+/data/release-policy.json
+/data/legal-approval.json
+
+# Credenciais
+.env
+.env.*
+**/.env
+**/.env.*
+*service-account*.json
+*serviceAccountKey*.json
+application_default_credentials.json
+
+# Relatorios locais
+relatorio-testes.txt
