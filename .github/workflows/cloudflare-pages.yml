@@ -23,6 +23,12 @@ jobs:
         uses: actions/checkout@v6
         with:
           persist-credentials: false
+      - name: Restore private commerce build inputs
+        env:
+          PLP_RELEASE_POLICY_B64: ${{ secrets.PLP_RELEASE_POLICY_B64 }}
+          PLP_KIWIFY_PRODUCTS_B64: ${{ secrets.PLP_KIWIFY_PRODUCTS_B64 }}
+          PLP_KIWIFY_OFFERS_B64: ${{ secrets.PLP_KIWIFY_OFFERS_B64 }}
+        run: node scripts/ci/restore-commerce-inputs.cjs
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
