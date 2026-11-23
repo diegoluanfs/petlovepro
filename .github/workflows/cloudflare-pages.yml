@@ -41,7 +41,7 @@ jobs:
       - name: Prepare isolated static deployment
         id: stage
         run: |
-          directory=$(node scripts/stage-cloudflare.cjs "$RUNNER_TEMP")
+          directory=$(node scripts/stage-cloudflare-canonical.cjs "$RUNNER_TEMP")
           echo "directory=$directory" >> "$GITHUB_OUTPUT"
       - name: Install Wrangler
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
