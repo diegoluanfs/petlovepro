@@ -23,6 +23,6 @@
     "offers:sync": "node scripts/update-offers-snapshot.cjs",
     "offers:audit": "node scripts/audit-catalog.cjs",
     "pretest": "node scripts/build-site.cjs",
-    "check:release": "node scripts/stage-cloudflare.cjs"
+    "check:release": "node scripts/check-release.cjs"
   }
 }
