@@ -1,4 +1,4 @@
-﻿'use strict';
+'use strict';
 
 const fs = require('node:fs');
 const os = require('node:os');
@@ -11,6 +11,7 @@ const temporaryRoot = fs.mkdtempSync(
 );
 
 const destination = path.join(temporaryRoot, 'public');
+fs.mkdirSync(destination, { recursive: true });
 
 try {
   console.log('Validando arquivos públicos da PetLovePro...');
