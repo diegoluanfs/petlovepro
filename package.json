@@ -22,6 +22,7 @@
     "deploy:hosting": "npm run verify && npm run release:check && firebase deploy --only hosting --config firebase.petlovepro.json --project petlovepro-ae222",
     "offers:sync": "node scripts/update-offers-snapshot.cjs",
     "offers:audit": "node scripts/audit-catalog.cjs",
-    "pretest": "node scripts/build-site.cjs"
+    "pretest": "node scripts/build-site.cjs",
+    "check:release": "node scripts/stage-cloudflare.cjs"
   }
 }
