@@ -95,6 +95,119 @@ function main() {
     process.stderr.write('[PetLovePro staging] app.js do staging alinhado ao frontend canonico.\n');
   }
   if (!fs.readFileSync(deployApp).equals(expected)) fail('Falha ao verificar app.js do staging');
+  // The legacy packager does not necessarily include generated files from
+  // site-dist/. Copy the audited, public build artifacts into the SAME folder
+  // that Wrangler will deploy. Never copy dist/ or private/. The original
+  // allowlist validator has already succeeded before any overlay takes place.
+  function publishBuilt(relative) {
+    const source = path.join(root, 'site-dist', relative);
+    const target = path.join(deploy, relative);
+    assertPlainFile(source);
+    const parent = path.dirname(target);
+    if (fs.existsSync(parent) && (!fs.lstatSync(parent).isDirectory() || fs.lstatSync(parent).isSymbolicLink()))
+      fail('Diretorio inseguro no staging: ' + relative);
+    fs.mkdirSync(parent, { recursive: true });
+    if (fs.existsSync(target) && (!fs.lstatSync(target).isFile() || fs.lstatSync(target).isSymbolicLink()))
+      fail('Destino inseguro no staging: ' + relative);
+    if (!fs.existsSync(target) || !fs.readFileSync(target).equals(fs.readFileSync(source)))
+      fs.copyFileSync(source, target);
+    if (!fs.readFileSync(target).equals(fs.readFileSync(source)))
+      fail('Arquivo nao corresponde ao build: ' + relative);
+  }
+  for (const [builtName, sourceName] of [
+    ['style.css', 'web/style.css'],
+    ['catalog-commerce.js', 'dist/catalog-commerce.js'],
+    ['catalog-commerce.json', 'dist/catalog-commerce.json'],
+  ]) {
+    const b = path.join(root, 'site-dist', builtName);
+    const source = path.join(root, sourceName);
+    assertPlainFile(b); assertPlainFile(source);
+    if (!fs.readFileSync(b).equals(fs.readFileSync(source)))
+      fail('Build desatualizado: site-dist/' + builtName + ' difere de ' + sourceName);
+  }
+  const coreFiles = [
+    'index.html', 'app.js', 'firebase-config.js', 'style.css',
+    'catalog-commerce.js', 'catalog-commerce.json', 'site-data.json',
+    'catalog.js', 'commerce-client.js', 'seller-public.json', 'favicon.svg',
+  ];
+  for (const name of coreFiles) publishBuilt(name);
+  const stylesheet = fs.readFileSync(path.join(deploy, 'style.css'), 'utf8');
+  if (!stylesheet.trim() || /^\s*</.test(stylesheet) || !stylesheet.includes('{'))
+    fail('style.css ausente ou invalido; nao publicar HTML como CSS');
+  const commerceJs = fs.readFileSync(path.join(deploy, 'catalog-commerce.js'),'utf8');
+  if (!commerceJs.includes('PetLoveProCommerceCatalog'))
+    fail('catalog-commerce.js nao contem o catalogo comercial esperado');
+  const commerce = JSON.parse(fs.readFileSync(path.join(deploy, 'catalog-commerce.json'),'utf8'));
+  const siteData = JSON.parse(fs.readFileSync(path.join(deploy, 'site-data.json'),'utf8'));
+  if (!Array.isArray(commerce.items) || commerce.items.length !== 60 ||
+      commerce.items.filter(x => x.kind === 'book').length !== 50 ||
+      commerce.items.filter(x => x.kind === 'collection').length !== 10)
+    fail('catalog-commerce.json nao contem os 50 livros e 10 colecoes');
+  if (!Array.isArray(siteData.books) || siteData.books.length !== 50 ||
+      !Array.isArray(siteData.collections) || siteData.collections.length !== 10)
+    fail('site-data.json nao contem o catalogo editorial esperado');
+  // Covers of articles and landing pages may live in public/assets/covers/.
+  // Never use a blanket directory copy: every public image must match its
+  // original file in public/assets, and all other extensions are rejected.
+  const builtAssets = path.join(root, 'site-dist', 'assets');
+  const publicAssets = path.join(root, 'public', 'assets');
+  for (const dir of [builtAssets, publicAssets]) {
+    if (!fs.existsSync(dir) || !fs.lstatSync(dir).isDirectory() || fs.lstatSync(dir).isSymbolicLink())
+      fail('Pasta de imagens publicas ausente ou insegura: ' + path.relative(root, dir));
+  }
+  let imageCount = 0;
+  function copyVerifiedImages(relativeDir = '', depth = 0) {
+    if (depth > 4) fail('Subpasta de imagens excessivamente profunda: assets/' + relativeDir);
+    const current = path.join(builtAssets, relativeDir);
+    for (const entry of fs.readdirSync(current, { withFileTypes: true })) {
+      const relative = path.join(relativeDir, entry.name);
+      if (!/^[a-zA-Z0-9][a-zA-Z0-9_.-]*$/.test(entry.name))
+        fail('Nome de imagem nao autorizado no build: assets/' + relative);
+      const source = path.join(publicAssets, relative);
+      if (entry.isDirectory()) {
+        if (!fs.existsSync(source) || !fs.lstatSync(source).isDirectory() || fs.lstatSync(source).isSymbolicLink())
+          fail('Subpasta de imagem nao autorizada no build: assets/' + relative);
+        copyVerifiedImages(relative, depth + 1);
+        continue;
+      }
+      if (!entry.isFile() || !/\.(?:png|jpe?g|webp|avif|svg|gif)$/i.test(entry.name))
+        fail('Imagem nao autorizada no build: assets/' + relative);
+      if (!fs.existsSync(source) || !fs.lstatSync(source).isFile() || fs.lstatSync(source).isSymbolicLink())
+        fail('Imagem sem origem publica verificada: assets/' + relative);
+      const builtImage = path.join(current, entry.name);
+      const stat = fs.statSync(builtImage);
+      if (!stat.size || stat.size > 25 * 1024 * 1024)
+        fail('Imagem publica vazia ou grande demais: assets/' + relative);
+      if (!fs.readFileSync(builtImage).equals(fs.readFileSync(source)))
+        fail('Imagem difere da origem publica: assets/' + relative);
+      if (/\.svg$/i.test(entry.name)) {
+        const svg = fs.readFileSync(builtImage, 'utf8');
+        if (/<script\b|<foreignObject\b|\bon[a-z]+\s*=|javascript\s*:|<!DOCTYPE|<!ENTITY/i.test(svg))
+          fail('SVG ativo ou inseguro no build: assets/' + relative);
+      }
+      imageCount += 1;
+      if (imageCount > 500) fail('Quantidade de imagens publicas acima do limite de seguranca');
+      publishBuilt(path.join('assets', relative));
+    }
+  }
+  copyVerifiedImages();
+  for (let n = 1; n <= 50; n++) {
+    const label = String(n).padStart(3, '0');
+    publishBuilt('assets/book-' + label + '.webp');
+    publishBuilt('previews/book-' + label + '.pdf');
+  }
+  for (let n = 1; n <= 10; n++)
+    publishBuilt('assets/collection-' + String(n).padStart(2, '0') + '.webp');
+  for (const entry of fs.readdirSync(path.join(root, 'site-dist', 'previews'), { withFileTypes: true }))
+    if (!entry.isFile() || !/^book-\d{3}\.pdf$/.test(entry.name))
+      fail('Arquivo de previa nao autorizado no build: ' + entry.name);
+  const publishedHtml = fs.readFileSync(path.join(deploy, 'index.html'), 'utf8');
+  for (const url of ['/style.css','/firebase-config.js','/catalog-commerce.js','/commerce-client.js','/app.js','/favicon.svg']) {
+    if (!publishedHtml.includes(url)) fail('Referencia HTML ausente: ' + url);
+    if (!fs.existsSync(path.join(deploy, url.slice(1)))) fail('Dependencia HTML ausente: ' + url);
+  }
+  if (!scriptOrderOK(publishedHtml)) fail('Ordem de scripts incorreta no artefato final');
+  process.stderr.write('[PetLovePro staging] CSS, catalogo e dados editoriais incluidos e verificados.\n');
   process.stderr.write('[PetLovePro staging] Staging aprovado.\n');
   process.stdout.write(deploy+'\n');
   working = undefined; // Do not remove: consumed by Wrangler in the next step.
