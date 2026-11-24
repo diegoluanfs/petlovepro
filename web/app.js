@@ -11,7 +11,7 @@ const cover=p=>'/assets/'+esc((p?.cover||p?.original_cover||(p?.kind==='book'?p.
 const image=(p,cls='')=>`<img src="${cover(p)}" alt="Capa do e-book ${esc(title(p))}" class="${cls}" loading="lazy" width="640" height="900">`;
 const isLive=p=>p?.live===true&&Number.isInteger(p.price)&&p.price>0;
 const collectionBooks=c=>{const ed=getEditor(c);const ids=c.volumeIds||ed?.volumes||[];return ids.map(find).filter(Boolean)};
-const route=()=>{const raw=(location.hash||'#/').replace(/^#\/?/,'').split('?')[0];return raw||'/';};
+const route=()=>{const raw=(location.hash||'#/').replace(/^#\/?/,'').split('?')[0];return '/'+raw.replace(/^\/+/, '');};
 const navigate=path=>{location.hash='#'+path;if(route()===path)render();};
 function toast(text){const el=$('#toast');el.textContent=text;el.classList.add('visible');clearTimeout(toast._t);toast._t=setTimeout(()=>el.classList.remove('visible'),5000)}
 function consent(){try{return localStorage.getItem(storage)}catch{return null}}
